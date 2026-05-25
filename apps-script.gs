@@ -1,72 +1,79 @@
-// ══════════════════════════════════════════════════════════
-// GRS SOLUÇÕES — Google Apps Script
-// Cole este código no Google Apps Script e publique como Web App
-// Guia de instalação: leia o SETUP.md
-// ══════════════════════════════════════════════════════════
+const DEFAULT_SHEET_NAME = "Leads";
 
-const SHEET_NAME = 'Leads';
+const HEADERS = [
+  "created_at",
+  "nome",
+  "whatsapp",
+  "tipo_contrato",
+  "valor_parcela",
+  "parcelas_atrasadas",
+  "banco",
+  "mensagem",
+  "origem",
+  "page_url",
+];
 
 function doPost(e) {
   try {
-    const data   = JSON.parse(e.postData.contents);
-    const sheet  = getOrCreateSheet();
-    const now    = new Date();
+    const props = PropertiesService.getScriptProperties();
+    const webhookSecret = props.getProperty("WEBHOOK_SECRET");
+    const spreadsheetId = props.getProperty("SPREADSHEET_ID");
+    const sheetName = props.getProperty("SHEET_NAME") || DEFAULT_SHEET_NAME;
+    const payload = JSON.parse((e.postData && e.postData.contents) || "{}");
 
-    const row = [
-      now.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }),
-      data.nome       || '',
-      data.sobrenome  || '',
-      data.email      || '',
-      data.telefone   || '',
-      data.mensagem   || '',
-      'Novo'
-    ];
+    if (!webhookSecret || payload.secret !== webhookSecret) {
+      return json({ ok: false, error: "unauthorized" });
+    }
 
-    sheet.appendRow(row);
+    const lead = payload.lead || {};
+    const meta = payload.meta || {};
+    const spreadsheet = spreadsheetId
+      ? SpreadsheetApp.openById(spreadsheetId)
+      : SpreadsheetApp.getActiveSpreadsheet();
+    const sheet = getOrCreateSheet(spreadsheet, sheetName);
 
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: true }))
-      .setMimeType(ContentService.MimeType.JSON);
-
-  } catch (err) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ success: false, error: err.message }))
-      .setMimeType(ContentService.MimeType.JSON);
-  }
-}
-
-function doGet() {
-  return ContentService
-    .createTextOutput('GRS Soluções — endpoint ativo.')
-    .setMimeType(ContentService.MimeType.TEXT);
-}
-
-function getOrCreateSheet() {
-  const ss    = SpreadsheetApp.getActiveSpreadsheet();
-  let sheet   = ss.getSheetByName(SHEET_NAME);
-
-  if (!sheet) {
-    sheet = ss.insertSheet(SHEET_NAME);
+    ensureHeaders(sheet);
     sheet.appendRow([
-      'Data/Hora', 'Nome', 'Sobrenome', 'E-mail', 'Telefone', 'Mensagem', 'Status'
+      meta.submitted_at || new Date().toISOString(),
+      lead.nome || "",
+      lead.whatsapp || "",
+      lead.tipo_contrato || "",
+      lead.valor_parcela || "",
+      lead.parcelas_atrasadas === true ? "Sim" : "Não",
+      lead.banco || "",
+      lead.mensagem || "",
+      lead.origem || "landing_page",
+      meta.page_url || "",
     ]);
 
-    // Formatar cabeçalho
-    const header = sheet.getRange(1, 1, 1, 7);
-    header.setBackground('#CC1530');
-    header.setFontColor('#FFFFFF');
-    header.setFontWeight('bold');
-    sheet.setFrozenRows(1);
-
-    // Larguras das colunas
-    sheet.setColumnWidth(1, 160);
-    sheet.setColumnWidth(2, 140);
-    sheet.setColumnWidth(3, 140);
-    sheet.setColumnWidth(4, 220);
-    sheet.setColumnWidth(5, 140);
-    sheet.setColumnWidth(6, 350);
-    sheet.setColumnWidth(7, 100);
+    return json({ ok: true });
+  } catch (error) {
+    return json({
+      ok: false,
+      error: error && error.message ? error.message : String(error),
+    });
   }
+}
 
-  return sheet;
+function getOrCreateSheet(spreadsheet, sheetName) {
+  return spreadsheet.getSheetByName(sheetName) || spreadsheet.insertSheet(sheetName);
+}
+
+function ensureHeaders(sheet) {
+  const range = sheet.getRange(1, 1, 1, HEADERS.length);
+  const currentHeaders = range.getValues()[0];
+  const hasHeaders = currentHeaders.some(function (cell) {
+    return String(cell).trim() !== "";
+  });
+
+  if (!hasHeaders) {
+    range.setValues([HEADERS]);
+    sheet.setFrozenRows(1);
+  }
+}
+
+function json(data) {
+  return ContentService.createTextOutput(JSON.stringify(data)).setMimeType(
+    ContentService.MimeType.JSON,
+  );
 }

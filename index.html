@@ -562,31 +562,65 @@
 
       <div class="contato__form-wrap reveal">
         <form class="contact-form" id="contactForm" novalidate>
+
+          <div class="form-group">
+            <label for="nome">Nome completo *</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+          </div>
+
+          <div class="form-group">
+            <label for="whatsapp">WhatsApp *</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" required />
+          </div>
+
+          <div class="form-group">
+            <label for="tipo_contrato">Tipo de contrato *</label>
+            <select id="tipo_contrato" name="tipo_contrato" required>
+              <option value="" disabled selected>Selecione o tipo de contrato</option>
+              <option value="Financiamento de Veículo">Financiamento de Veículo</option>
+              <option value="Financiamento Imobiliário">Financiamento Imobiliário</option>
+              <option value="Empréstimo Pessoal">Empréstimo Pessoal</option>
+              <option value="Cartão de Crédito">Cartão de Crédito</option>
+              <option value="Cheque Especial">Cheque Especial</option>
+              <option value="Leasing">Leasing</option>
+              <option value="Crédito Consignado">Crédito Consignado</option>
+              <option value="Capital de Giro">Capital de Giro (PJ)</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+
           <div class="form-row">
             <div class="form-group">
-              <label for="nome">Nome *</label>
-              <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+              <label for="valor_parcela">Valor da parcela (R$)</label>
+              <input type="text" id="valor_parcela" name="valor_parcela" placeholder="Ex: 1.200,00" />
             </div>
             <div class="form-group">
-              <label for="sobrenome">Sobrenome *</label>
-              <input type="text" id="sobrenome" name="sobrenome" placeholder="Seu sobrenome" required />
+              <label for="banco">Banco / Financeira</label>
+              <input type="text" id="banco" name="banco" placeholder="Ex: Itaú, Bradesco..." />
             </div>
           </div>
+
           <div class="form-group">
-            <label for="email">E-mail *</label>
-            <input type="email" id="email" name="email" placeholder="seu@email.com.br" required />
+            <label>Possui parcelas atrasadas?</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="parcelas_atrasadas" value="sim" />
+                <span>Sim</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="parcelas_atrasadas" value="nao" checked />
+                <span>Não</span>
+              </label>
+            </div>
           </div>
+
           <div class="form-group">
-            <label for="telefone">Telefone / WhatsApp</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" />
-          </div>
-          <div class="form-group">
-            <label for="mensagem">Mensagem *</label>
-            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva brevemente sua situação financeira e como podemos ajudar..." required></textarea>
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva brevemente sua situação..."></textarea>
           </div>
 
           <button type="submit" class="btn btn--gold btn--lg btn--full">
-            <span>Enviar Mensagem</span>
+            <span>Solicitar Análise Gratuita</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
             </svg>
@@ -597,8 +631,8 @@
               <path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
             <div>
-              <strong>Mensagem enviada com sucesso!</strong>
-              <span>Nossa equipe entrará em contato em breve.</span>
+              <strong>Solicitação enviada com sucesso!</strong>
+              <span>Nossa equipe entrará em contato em breve pelo WhatsApp.</span>
             </div>
           </div>
         </form>

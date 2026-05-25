@@ -2,8 +2,8 @@
    GRS SOLUÇÕES — Interactions & Animations
    ══════════════════════════════════════════════════════════ */
 
-// ── Cole aqui a URL gerada pelo Google Apps Script após publicar ──
-const SHEET_ENDPOINT = 'COLE_AQUI_A_URL_DO_APPS_SCRIPT';
+const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyhIo8fN5plT3YURJZHgve2h16numLbdgpj2svK-3HPa9-w1F8l4ap-q6JdBEPtAfXW/exec';
+const WEBHOOK_SECRET = 'grs-leads-2026-planilha-segura-7429';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      const el     = entry.target;
-      const target = parseInt(el.dataset.target, 10);
-      const start  = performance.now();
+      const el       = entry.target;
+      const target   = parseInt(el.dataset.target, 10);
+      const start    = performance.now();
       const duration = 1800;
 
       const tick = (now) => {
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const dotsEl = document.getElementById('testimonialsDots');
 
   if (cards.length && dotsEl) {
-    let current = 0;
+    let current      = 0;
     const visible    = window.innerWidth <= 768 ? 1 : 2;
     const totalSlides = Math.ceil(cards.length / visible);
 
@@ -152,25 +152,32 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.disabled       = true;
       btn.innerHTML      = '<span>Enviando...</span>';
 
-      const data = {
-        nome:      form.nome.value.trim(),
-        sobrenome: form.sobrenome.value.trim(),
-        email:     form.email.value.trim(),
-        telefone:  form.telefone.value.trim(),
-        mensagem:  form.mensagem.value.trim(),
+      const parcelasAtrasadasEl = form.querySelector('input[name="parcelas_atrasadas"]:checked');
+
+      const payload = {
+        secret: WEBHOOK_SECRET,
+        lead: {
+          nome:               form.nome.value.trim(),
+          whatsapp:           form.whatsapp.value.trim(),
+          tipo_contrato:      form.tipo_contrato.value,
+          valor_parcela:      form.valor_parcela.value.trim(),
+          parcelas_atrasadas: parcelasAtrasadasEl ? parcelasAtrasadasEl.value === 'sim' : false,
+          banco:              form.banco.value.trim(),
+          mensagem:           form.mensagem.value.trim(),
+          origem:             'landing_page',
+        },
+        meta: {
+          submitted_at: new Date().toISOString(),
+          page_url:     window.location.href,
+        },
       };
 
       try {
-        // Se o endpoint não foi configurado ainda, apenas simula
-        if (SHEET_ENDPOINT === 'COLE_AQUI_A_URL_DO_APPS_SCRIPT') {
-          await new Promise(r => setTimeout(r, 1000));
-        } else {
-          await fetch(SHEET_ENDPOINT, {
-            method:  'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body:    JSON.stringify(data),
-          });
-        }
+        await fetch(SHEET_ENDPOINT, {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify(payload),
+        });
 
         form.reset();
         success.classList.add('show');
@@ -178,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       } catch (err) {
         console.error('Erro ao enviar formulário:', err);
-        alert('Ocorreu um erro. Por favor, entre em contato pelo WhatsApp.');
+        alert('Ocorreu um erro ao enviar. Por favor, entre em contato pelo WhatsApp.');
       } finally {
         btn.innerHTML = originalHtml;
         btn.disabled  = false;
@@ -186,14 +193,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── Phone mask ───────────────────────────────────────────
-  const phoneInput = document.getElementById('telefone');
-  if (phoneInput) {
-    phoneInput.addEventListener('input', (e) => {
+  // ── Phone mask (WhatsApp) ────────────────────────────────
+  const whatsappInput = document.getElementById('whatsapp');
+  if (whatsappInput) {
+    whatsappInput.addEventListener('input', (e) => {
       let v = e.target.value.replace(/\D/g, '').slice(0, 11);
       if      (v.length > 10) v = v.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
       else if (v.length >  6) v = v.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
       else if (v.length >  2) v = v.replace(/(\d{2})(\d{0,5})/, '($1) $2');
+      e.target.value = v;
+    });
+  }
+
+  // ── Currency mask (valor_parcela) ────────────────────────
+  const parcelaInput = document.getElementById('valor_parcela');
+  if (parcelaInput) {
+    parcelaInput.addEventListener('input', (e) => {
+      let v = e.target.value.replace(/\D/g, '');
+      if (!v) { e.target.value = ''; return; }
+      v = (parseInt(v, 10) / 100).toLocaleString('pt-BR', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      });
       e.target.value = v;
     });
   }
@@ -206,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         window.scrollTo({
           top: target.offsetTop - navbar.offsetHeight - 8,
-          behavior: 'smooth'
+          behavior: 'smooth',
         });
       }
     });
