@@ -33,6 +33,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── Hero parallax — sutil, premium ──────────────────────
+  const heroVisual = document.querySelector('.hero__visual');
+  const docBack    = document.querySelector('.hero__doc--back');
+  const docFront   = document.querySelector('.hero__doc--front');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (heroVisual && docBack && docFront && !prefersReducedMotion) {
+    const hero = document.querySelector('.hero');
+    let mouseX = 0, mouseY = 0;
+    let targetX = 0, targetY = 0;
+    let rafId;
+
+    const onMouseMove = (e) => {
+      const rect = hero.getBoundingClientRect();
+      mouseX = ((e.clientX - rect.left) / rect.width  - 0.5) * 2;
+      mouseY = ((e.clientY - rect.top)  / rect.height - 0.5) * 2;
+    };
+
+    const animateDocs = () => {
+      targetX += (mouseX - targetX) * 0.06;
+      targetY += (mouseY - targetY) * 0.06;
+      docBack.style.transform  = `rotate(-4deg) translate(${targetX * -8}px, ${targetY * -6}px)`;
+      docFront.style.transform = `rotate(3deg)  translate(${targetX *  10}px, ${targetY *  8}px)`;
+      rafId = requestAnimationFrame(animateDocs);
+    };
+
+    hero.addEventListener('mousemove', onMouseMove);
+    hero.addEventListener('mouseleave', () => { mouseX = 0; mouseY = 0; });
+    animateDocs();
+  }
+
   // ── Scroll reveal ────────────────────────────────────────
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
