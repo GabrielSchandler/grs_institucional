@@ -1301,6 +1301,135 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .sobre__link svg { transition: transform var(--t-base) var(--ease); }
 .sobre__link:hover svg { transform: translateX(3px); }
 
+/* ═══════════════════ EQUIPE ═══════════════════ */
+.equipe { background: var(--surface); }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.25rem;
+}
+
+.team-card {
+  background: var(--canvas);
+  border: 1px solid var(--border-lt);
+  border-radius: 16px;
+  padding: 2.5rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform      var(--t-base) var(--ease),
+    box-shadow     var(--t-slow) var(--ease),
+    border-color   var(--t-base) var(--ease),
+    background     var(--t-base) var(--ease);
+}
+
+/* Barra de acento vermelha no topo */
+.team-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t-slow) var(--ease);
+}
+
+.team-card:hover {
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: var(--sh-lg);
+  transform: translateY(-3px);
+}
+.team-card:hover::before { transform: scaleX(1); }
+
+.team-card__image {
+  display: flex;
+  justify-content: center;
+}
+
+.team-card__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--surface);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  transition: transform var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease);
+}
+.team-card:hover .team-card__avatar {
+  transform: scale(1.08);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.16);
+}
+.team-card__avatar svg {
+  width: 44px;
+  height: 44px;
+  stroke-width: 1;
+}
+
+.team-card__content {
+  text-align: center;
+}
+
+.team-card__name {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--t1);
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.team-card__title {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--red);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  transition: color var(--t-base) var(--ease);
+}
+.team-card:hover .team-card__title { color: var(--red-dark); }
+
+.team-card__specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.team-card__specialties span {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--red);
+  background: var(--red-light);
+  border: 1px solid rgba(195,18,48,0.14);
+  padding: 0.28rem 0.7rem;
+  border-radius: 100px;
+  letter-spacing: 0.03em;
+  transition: background var(--t-base) var(--ease), border-color var(--t-base) var(--ease);
+}
+.team-card:hover .team-card__specialties span {
+  background: rgba(195,18,48,0.11);
+  border-color: rgba(195,18,48,0.22);
+}
+
+.team-card__bio {
+  font-size: 0.88rem;
+  color: var(--t3);
+  line-height: 1.72;
+  border-top: 1px solid var(--border-lt);
+  padding-top: 1rem;
+  margin: 0;
+}
+
 /* ═══════════════════ SERVIÇOS ═══════════════════ */
 .servicos { background: var(--surface); }
 
@@ -2095,6 +2224,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .sobre__sidebar { position: static; }
   .sobre__meta { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; padding-top: 1.5rem; }
   .sobre__meta-item { border-bottom: 1px solid var(--border-lt); padding-bottom: 1.25rem; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 1.75rem; }
+  .team-card { padding: 2rem; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
   .footer__brand { grid-column: 1 / -1; }
   .footer__credentials-inner { grid-template-columns: repeat(2, 1fr); }
@@ -2160,6 +2291,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .services-grid { grid-template-columns: 1fr; }
   .porque-grid { grid-template-columns: 1fr; gap: 0.875rem; }
   .sobre__meta { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .team-card { padding: 1.75rem; }
+  .team-card__avatar { width: 90px; height: 90px; }
+  .team-card__avatar svg { width: 40px; height: 40px; }
   .pillar { grid-template-columns: 1fr; gap: 0.5rem; padding: 1.25rem 0; }
   .footer__credentials { padding: 1.75rem 0; }
   .footer__credentials-inner { grid-template-columns: 1fr; gap: 1.25rem; }
