@@ -1256,6 +1256,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--red);
+  padding-top: 0.2rem;
+}
+.pillar__right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 .pillar__title {
   display: block;
@@ -1264,7 +1270,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 600;
   color: var(--t1);
   line-height: 1.35;
-  margin-bottom: 0.4rem;
   letter-spacing: -0.012em;
 }
 .pillar__desc {
