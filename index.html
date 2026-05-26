@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -18,9 +18,20 @@
   <!-- ══════════════════ NAVBAR ══════════════════ -->
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
-      <a href="#inicio" class="navbar__logo">
-        <span class="logo-grs">GRS</span>
-        <span class="logo-solucoes">Soluções</span>
+      <a href="#inicio" class="navbar__logo" aria-label="GRS Soluções — Início">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="21" height="21" rx="3" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-opacity="0.18"/>
+            <rect x="4" y="5"  width="14" height="1.5" rx="0.5" fill="currentColor"/>
+            <rect x="4" y="9"  width="10" height="1.5" rx="0.5" fill="currentColor" fill-opacity="0.55"/>
+            <rect x="4" y="13" width="14" height="1.5" rx="0.5" fill="currentColor" fill-opacity="0.55"/>
+            <rect x="4" y="17" width="7"  height="1.5" rx="0.5" fill="#C31230"/>
+          </svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-grs">GRS</span>
+          <span class="logo-solucoes">Soluções</span>
+        </span>
       </a>
 
       <nav class="navbar__menu" id="navMenu">
@@ -254,74 +265,86 @@
   <!-- ══════════════════ SOBRE NÓS ══════════════════ -->
   <section class="section sobre" id="sobre">
     <span class="section-num" aria-hidden="true">01</span>
-    <div class="container sobre__grid">
-      <div class="sobre__visual reveal">
-        <div class="sobre__image-wrap">
-          <div class="sobre__image-bg"></div>
-          <div class="sobre__badge-float">
-            <span class="badge-float__icon">🏆</span>
-            <div>
-              <strong>Referência Nacional</strong>
-              <span>Em revisão de contratos</span>
-            </div>
+    <div class="container sobre__layout">
+
+      <!-- Sidebar editorial — dados institucionais -->
+      <aside class="sobre__sidebar reveal">
+        <div class="sobre__meta">
+          <div class="sobre__meta-item">
+            <span class="sobre__meta-label">Fundação</span>
+            <strong class="sobre__meta-value">2014</strong>
+          </div>
+          <div class="sobre__meta-item">
+            <span class="sobre__meta-label">Atuação</span>
+            <strong class="sobre__meta-value">Nacional</strong>
+          </div>
+          <div class="sobre__meta-item">
+            <span class="sobre__meta-label">Sede</span>
+            <strong class="sobre__meta-value">São Paulo · SP</strong>
+          </div>
+          <div class="sobre__meta-item">
+            <span class="sobre__meta-label">Especialização</span>
+            <strong class="sobre__meta-value">
+              Direito Bancário<br>
+              Perícia Contábil<br>
+              Negociação
+            </strong>
           </div>
         </div>
-      </div>
+      </aside>
 
-      <div class="sobre__text reveal">
-        <span class="section-tag">Quem Somos</span>
-        <h2 class="section-title">Um grupo de empresas que luta pela sua <em>justiça financeira</em></h2>
+      <!-- Coluna principal — texto editorial -->
+      <div class="sobre__main reveal">
+        <span class="section-tag">Sobre a GRS</span>
+        <h2 class="section-title">Uma década dedicada<br>à <em>justiça financeira.</em></h2>
 
         <p class="sobre__lead">
-          Somos um grupo de empresas que tem se consolidado como referência no combate aos juros abusivos, oferecendo suporte jurídico e financeiro de alto nível.
+          A GRS Soluções é um grupo especializado em revisão de contratos financeiros, perícia contábil e negociação direta com instituições bancárias. Desde 2014, atuamos exclusivamente na defesa de pessoas físicas e jurídicas frente a práticas abusivas no mercado de crédito.
         </p>
+
+        <blockquote class="sobre__pullquote">
+          <span class="sobre__pullquote-mark" aria-hidden="true">"</span>
+          A confiança que conquistamos é fruto de uma postura firme, técnica apurada e atendimento humano em cada caso.
+        </blockquote>
 
         <p class="sobre__body">
-          Nosso compromisso é com a verdade, a ética e a transparência. Ao longo dos anos, conquistamos a confiança de centenas de clientes graças à nossa postura firme, atendimento humanizado e resultados concretos.
+          Nossa equipe multidisciplinar reúne advogados especializados em direito bancário, contadores periciais e negociadores experientes. Combinamos rigor técnico, transparência operacional e acompanhamento próximo do cliente em todas as etapas do processo.
         </p>
 
-        <p class="sobre__body">
-          Com uma equipe multidisciplinar de especialistas em direito bancário, contabilidade e negociação, oferecemos soluções personalizadas para pessoas físicas e jurídicas que enfrentam dificuldades com financiamentos, empréstimos, cartões de crédito e contratos de leasing.
-        </p>
-
-        <div class="sobre__values">
-          <div class="value-item">
-            <div class="value-item__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            </div>
-            <div>
-              <strong>Missão</strong>
-              <span>Defender os direitos do consumidor com excelência jurídica e financeira.</span>
-            </div>
+        <div class="sobre__pillars">
+          <div class="pillar">
+            <span class="pillar__label">Missão</span>
+            <strong class="pillar__title">Defender o consumidor financeiro</strong>
+            <p class="pillar__desc">Com excelência técnica e postura ética em cada contrato analisado.</p>
           </div>
-          <div class="value-item">
-            <div class="value-item__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
-              </svg>
-            </div>
-            <div>
-              <strong>Visão</strong>
-              <span>Ser referência nacional em revisões de contratos, reconhecidos pela ética e excelência.</span>
-            </div>
+          <div class="pillar">
+            <span class="pillar__label">Visão</span>
+            <strong class="pillar__title">Ser referência nacional</strong>
+            <p class="pillar__desc">Em revisão de contratos bancários e negociação com instituições financeiras.</p>
           </div>
-          <div class="value-item">
-            <div class="value-item__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
-            </div>
-            <div>
-              <strong>Valores</strong>
-              <span>Ética, transparência, humanização e resultados reais para cada cliente.</span>
-            </div>
+          <div class="pillar">
+            <span class="pillar__label">Valores</span>
+            <strong class="pillar__title">Ética, técnica e transparência</strong>
+            <p class="pillar__desc">Princípios que orientam cada decisão estratégica e cada interação.</p>
           </div>
         </div>
 
-        <a href="#contato" class="btn btn--gold btn--md">Fale com um Especialista</a>
+        <div class="sobre__cta-row">
+          <a href="#contato" class="btn btn--gold btn--md">
+            <span>Fale com um especialista</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#processo" class="sobre__link">
+            Conheça nossa metodologia
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -330,9 +353,9 @@
     <span class="section-num" aria-hidden="true">02</span>
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag section-tag--light">O Que Fazemos</span>
-        <h2 class="section-title section-title--center">Soluções completas para<br /><em>quem merece justiça</em></h2>
-        <p class="section-subtitle">Atuamos em todas as frentes do combate às práticas abusivas no mercado financeiro.</p>
+        <span class="section-tag section-tag--light">Áreas de Atuação</span>
+        <h2 class="section-title section-title--center">Atuação completa em<br /><em>direito financeiro.</em></h2>
+        <p class="section-subtitle">Quatro frentes técnicas integradas para o combate às práticas abusivas no mercado de crédito.</p>
       </div>
 
       <div class="services-grid">
@@ -480,41 +503,59 @@
     <span class="section-num" aria-hidden="true">04</span>
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Nossos Diferenciais</span>
-        <h2 class="section-title section-title--center">Por que escolher a<br /><em>GRS Soluções?</em></h2>
+        <span class="section-tag">Nossa Postura</span>
+        <h2 class="section-title section-title--center">O que nos torna<br /><em>diferentes.</em></h2>
+        <p class="section-subtitle">Três princípios fundamentais que orientam toda a operação da GRS Soluções.</p>
       </div>
 
       <div class="porque-grid">
-        <div class="porque-card reveal">
-          <div class="porque-card__num">01</div>
-          <h3>Equipe Multidisciplinar</h3>
-          <p>Especialistas em direito bancário, contabilidade e negociação trabalhando em conjunto pela sua causa.</p>
-        </div>
-        <div class="porque-card reveal">
-          <div class="porque-card__num">02</div>
-          <h3>Soluções Personalizadas</h3>
-          <p>Cada caso é único. Desenvolvemos estratégias sob medida para pessoas físicas e jurídicas.</p>
-        </div>
-        <div class="porque-card reveal">
-          <div class="porque-card__num">03</div>
-          <h3>Acesso à Justiça</h3>
-          <p>Acreditamos que o acesso à informação e à justiça é fundamental para combater abusos no mercado financeiro.</p>
-        </div>
-        <div class="porque-card reveal">
-          <div class="porque-card__num">04</div>
-          <h3>Atendimento Humanizado</h3>
-          <p>Na GRS Soluções, você não está sozinho. Nossa equipe cuida de você com empatia e comprometimento.</p>
-        </div>
-        <div class="porque-card reveal">
-          <div class="porque-card__num">05</div>
-          <h3>Resultados Comprovados</h3>
-          <p>Centenas de clientes satisfeitos e contratos revisados comprovam nossa eficiência e excelência.</p>
-        </div>
-        <div class="porque-card reveal">
-          <div class="porque-card__num">06</div>
-          <h3>Transparência Total</h3>
-          <p>Você acompanha cada etapa do processo. Sem surpresas, sem letras miúdas — apenas honestidade.</p>
-        </div>
+        <article class="porque-card reveal">
+          <div class="porque-card__header">
+            <span class="porque-card__num">01</span>
+            <span class="porque-card__rule"></span>
+          </div>
+          <h3 class="porque-card__title">Técnica que respeita o caso</h3>
+          <p class="porque-card__lead">
+            Cada contrato é analisado individualmente por uma equipe multidisciplinar. Não trabalhamos com soluções padronizadas — desenvolvemos a estratégia específica que cada situação exige.
+          </p>
+          <ul class="porque-card__list">
+            <li>Perícia contábil documentada</li>
+            <li>Análise jurídica especializada</li>
+            <li>Cálculo preciso e auditável</li>
+          </ul>
+        </article>
+
+        <article class="porque-card reveal">
+          <div class="porque-card__header">
+            <span class="porque-card__num">02</span>
+            <span class="porque-card__rule"></span>
+          </div>
+          <h3 class="porque-card__title">Transparência em cada etapa</h3>
+          <p class="porque-card__lead">
+            O cliente acompanha o desenvolvimento do caso de perto. Toda comunicação é registrada, todo cálculo é demonstrado, toda estratégia é discutida abertamente antes da execução.
+          </p>
+          <ul class="porque-card__list">
+            <li>Relatórios técnicos detalhados</li>
+            <li>Honorários claros desde o início</li>
+            <li>Sem letras miúdas no contrato</li>
+          </ul>
+        </article>
+
+        <article class="porque-card reveal">
+          <div class="porque-card__header">
+            <span class="porque-card__num">03</span>
+            <span class="porque-card__rule"></span>
+          </div>
+          <h3 class="porque-card__title">Atendimento humano e firme</h3>
+          <p class="porque-card__lead">
+            Negociamos com instituições financeiras com a firmeza necessária para obter o melhor resultado — e tratamos cada cliente com a empatia que situações financeiras complexas merecem.
+          </p>
+          <ul class="porque-card__list">
+            <li>Acompanhamento personalizado</li>
+            <li>Negociação assertiva</li>
+            <li>Suporte em momentos difíceis</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
@@ -524,11 +565,11 @@
     <div class="cta-banner__orb"></div>
     <div class="container cta-banner__content reveal">
       <h2 class="cta-banner__title">
-        Chega de pagar mais do que você deve.
+        Você não precisa pagar<br>mais do que deve.
       </h2>
       <p class="cta-banner__sub">
-        A GRS Soluções oferece condições especiais para a quitação integral do seu contrato,<br />
-        com descontos que podem chegar a <strong>até 70%</strong>.
+        Conduzimos a negociação ou ação judicial para devolver à sua relação contratual<br>
+        o equilíbrio financeiro previsto em lei. Descontos de até <strong>70%</strong> em quitações.
       </p>
       <div class="cta-banner__ctas">
         <a href="https://wa.me/5511991632556" target="_blank" class="btn btn--gold btn--lg">
@@ -549,9 +590,9 @@
     <span class="section-num" aria-hidden="true">05</span>
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Depoimentos</span>
-        <h2 class="section-title section-title--center">O que nossos clientes<br /><em>têm a dizer</em></h2>
-        <p class="section-subtitle">Veja o que nossos clientes têm a dizer sobre a qualidade e eficiência de nossos serviços especializados.</p>
+        <span class="section-tag">Casos Atendidos</span>
+        <h2 class="section-title section-title--center">Histórias de quem<br /><em>confiou.</em></h2>
+        <p class="section-subtitle">Relatos reais de clientes atendidos pela equipe técnica da GRS Soluções.</p>
       </div>
 
       <div class="testimonials-slider">
@@ -855,12 +896,23 @@
     <div class="container footer__grid">
       <div class="footer__brand">
         <a href="#inicio" class="navbar__logo">
-          <span class="logo-grs">GRS</span>
-          <span class="logo-solucoes">Soluções</span>
+          <span class="logo-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.5" y="0.5" width="21" height="21" rx="3" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-opacity="0.18"/>
+              <rect x="4" y="5"  width="14" height="1.5" rx="0.5" fill="currentColor"/>
+              <rect x="4" y="9"  width="10" height="1.5" rx="0.5" fill="currentColor" fill-opacity="0.55"/>
+              <rect x="4" y="13" width="14" height="1.5" rx="0.5" fill="currentColor" fill-opacity="0.55"/>
+              <rect x="4" y="17" width="7"  height="1.5" rx="0.5" fill="#C31230"/>
+            </svg>
+          </span>
+          <span class="logo-text">
+            <span class="logo-grs">GRS</span>
+            <span class="logo-solucoes">Soluções</span>
+          </span>
         </a>
-        <p class="footer__tagline">Justiça financeira começa aqui.</p>
+        <p class="footer__tagline">Direito financeiro com rigor técnico.</p>
         <p class="footer__desc">
-          Especialistas em combate a juros abusivos, revisão de contratos e negociação com instituições financeiras.
+          Especialistas em revisão de contratos, perícia contábil e negociação direta com instituições financeiras desde 2014.
         </p>
       </div>
 
@@ -909,10 +961,34 @@
       </div>
     </div>
 
+    <!-- Linha de credenciais editorial -->
+    <div class="footer__credentials">
+      <div class="container">
+        <div class="footer__credentials-inner">
+          <div class="footer__cred">
+            <span class="footer__cred-label">Sede</span>
+            <strong class="footer__cred-value">Av. São Miguel, 1440 — São Paulo · SP</strong>
+          </div>
+          <div class="footer__cred">
+            <span class="footer__cred-label">Atendimento</span>
+            <strong class="footer__cred-value">Segunda à Sexta · 9h às 18h</strong>
+          </div>
+          <div class="footer__cred">
+            <span class="footer__cred-label">Especialização</span>
+            <strong class="footer__cred-value">Direito Bancário · Perícia · Negociação</strong>
+          </div>
+          <div class="footer__cred">
+            <span class="footer__cred-label">Operação desde</span>
+            <strong class="footer__cred-value">2014 · Mais de uma década</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
         <span>© 2025 GRS Soluções — Todos os direitos reservados.</span>
-        <a href="blank-6" class="footer__privacy">Política de Privacidade</a>
+        <a href="#" class="footer__privacy">Política de Privacidade</a>
       </div>
     </div>
   </footer>
