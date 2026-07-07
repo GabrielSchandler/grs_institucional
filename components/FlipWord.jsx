@@ -15,19 +15,37 @@ export default function FlipWord({ words, interval = 2400 }) {
     let idx = 0;
 
     function measure(text) {
+      // Copia as propriedades de fonte uma a uma (não o shorthand "font") —
+      // o shorthand computado pode vir vazio/inconsistente entre navegadores
+      // com fontes customizadas (next/font), o que zerava a largura medida e
+      // deixava a palavra do headline invisível (só a barrinha aparecia).
       const probe = document.createElement("span");
-      probe.style.cssText = "position:absolute;visibility:hidden;white-space:nowrap;";
+      probe.style.cssText = "position:absolute;visibility:hidden;white-space:nowrap;top:-9999px;left:-9999px;";
       const cs = getComputedStyle(inner);
-      probe.style.font = cs.font;
+      probe.style.fontFamily = cs.fontFamily;
+      probe.style.fontSize = cs.fontSize;
+      probe.style.fontWeight = cs.fontWeight;
       probe.style.fontStyle = cs.fontStyle;
+      probe.style.letterSpacing = cs.letterSpacing;
       probe.textContent = text;
       document.body.appendChild(probe);
       const w = probe.getBoundingClientRect().width;
       probe.remove();
       return w;
     }
-    const setWidth = (text) => { flip.style.width = `${measure(text) + 4}px`; };
+    const setWidth = (text) => {
+      const w = measure(text);
+      // Se a medição falhar por qualquer motivo, não trava a largura —
+      // melhor deixar o texto no tamanho natural do que escondê-lo.
+      if (w > 0) flip.style.width = `${w + 4}px`;
+      else flip.style.removeProperty("width");
+    };
     setWidth(words[0]);
+    // Refaz a medição quando a fonte real (Fraunces) terminar de carregar —
+    // a primeira medição pode ter usado a fonte de fallback (font-display: swap).
+    if (document.fonts?.ready) {
+      document.fonts.ready.then(() => setWidth(inner.textContent));
+    }
 
     const timer = setInterval(() => {
       idx = (idx + 1) % words.length;

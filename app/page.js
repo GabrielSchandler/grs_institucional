@@ -1,16 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import Nav from "../components/Nav";
+import Atmosphere from "../components/Atmosphere";
 import FlipWord from "../components/FlipWord";
 import ScrollFX from "../components/ScrollFX";
 import CtaButton from "../components/CtaButton";
-import {
-  CONTATO,
-  METRICAS,
-  SERVICOS,
-  DEPOIMENTOS,
-  FAQ,
-  MANIFESTO,
-} from "../lib/content";
+import Footer from "../components/Footer";
+import { METRICAS, SERVICOS, DEPOIMENTOS, FAQ, MANIFESTO } from "../lib/content";
 
 // FAQ em dados estruturados — o mesmo conteúdo visível na página, no formato
 // que o Google usa pra rich results e que assistentes de IA conseguem citar.
@@ -46,29 +42,13 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <ScrollFX />
-
-      <div className="atmosphere" aria-hidden="true">
-        <div className="atmosphere__hero-wrap">
-          <Image
-            src="/img/hero.png"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            style={{ objectFit: "cover" }}
-          />
-          <div className="atmosphere__hero-gradient" />
-        </div>
-        <div className="atmosphere__grain" />
-        <div className="atmosphere__vignette" />
-      </div>
-
+      <Atmosphere />
       <Nav />
 
       <main className="content" id="topo">
         {/* HERO */}
         <section className="hero">
-          <p className="eyebrow">GRS Soluções — Revisão de juros</p>
+          <p className="eyebrow">Revisão de juros e contratos</p>
           <h1 className="hero__title">
             Reduza os juros e taxas do seu financiamento de
             <br />
@@ -164,10 +144,13 @@ export default function Home() {
             </h2>
             <p className="sobre__body">
               A GRS Soluções é uma empresa especializada em análise e revisão de
-              contratos de financiamento e empréstimo. Há mais de 10 anos
-              identificamos juros abusivos, tarifas indevidas e cláusulas
-              irregulares em contratos de veículos, imóveis e crédito —
-              atendendo pessoa física e jurídica em todo o Brasil.
+              contratos de{" "}
+              <Link href="/revisao-financiamento-veiculo">financiamento de veículo</Link>,{" "}
+              <Link href="/revisao-financiamento-imovel">financiamento de imóvel</Link> e{" "}
+              <Link href="/revisao-emprestimo">empréstimo</Link>. Há mais de 10
+              anos identificamos juros abusivos, tarifas indevidas e cláusulas
+              irregulares — atendendo pessoa física e jurídica em todo o
+              Brasil.
             </p>
             <p className="sobre__body">
               Nossa missão é defender o consumidor financeiro com excelência
@@ -249,63 +232,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FOOTER */}
-        <footer className="footer">
-          <div className="footer__grid">
-            <div>
-              <p className="footer__brand">
-                GRS <em>Soluções</em>
-              </p>
-              <p style={{ marginTop: 14, maxWidth: "38ch" }}>
-                Análise e revisão técnica de contratos de financiamento e
-                empréstimo. Pessoa física e jurídica, em todo o Brasil.
-              </p>
-              <p style={{ marginTop: 14 }}>CNPJ {CONTATO.cnpj}</p>
-            </div>
-            <div>
-              <h4>Contato</h4>
-              <ul>
-                <li>
-                  <a href={CONTATO.whatsappUrl} target="_blank" rel="noopener noreferrer">
-                    WhatsApp {CONTATO.telefone}
-                  </a>
-                </li>
-                <li>
-                  <a href={`mailto:${CONTATO.email}`}>{CONTATO.email}</a>
-                </li>
-                <li>{CONTATO.horario}</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Onde estamos</h4>
-              <p>
-                {CONTATO.endereco.rua} — {CONTATO.endereco.bairro}
-                <br />
-                {CONTATO.endereco.cidade} · {CONTATO.endereco.uf} ·{" "}
-                {CONTATO.endereco.cep}
-              </p>
-              <ul style={{ marginTop: 12 }}>
-                <li>
-                  <a href={CONTATO.instagram} target="_blank" rel="noopener noreferrer">
-                    Instagram
-                  </a>
-                </li>
-                <li>
-                  <a href={CONTATO.facebook} target="_blank" rel="noopener noreferrer">
-                    Facebook
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <p className="footer__disclaimer">
-            A GRS Soluções realiza análise técnica de contratos financeiros e
-            atua em conjunto com advogados parceiros. Cada caso depende de
-            análise individual — não prometemos resultados garantidos. ©{" "}
-            {new Date().getFullYear()} GRS Soluções. Todos os direitos
-            reservados.
-          </p>
-        </footer>
+        <Footer />
       </main>
     </>
   );
