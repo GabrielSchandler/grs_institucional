@@ -48,7 +48,17 @@ export default function Home() {
       <ScrollFX />
 
       <div className="atmosphere" aria-hidden="true">
-        <div className="atmosphere__hero" />
+        <div className="atmosphere__hero-wrap">
+          <Image
+            src="/img/hero.png"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            style={{ objectFit: "cover" }}
+          />
+          <div className="atmosphere__hero-gradient" />
+        </div>
         <div className="atmosphere__grain" />
         <div className="atmosphere__vignette" />
       </div>
@@ -60,7 +70,8 @@ export default function Home() {
         <section className="hero">
           <p className="eyebrow">GRS Soluções — Revisão de juros</p>
           <h1 className="hero__title">
-            Reduza os juros e taxas do seu financiamento de{" "}
+            Reduza os juros e taxas do seu financiamento de
+            <br />
             <FlipWord words={["Imóvel", "Veículo", "Empréstimo"]} />
           </h1>
           <p className="hero__sub">
@@ -135,7 +146,7 @@ export default function Home() {
             <div className="servicos__grid">
               {SERVICOS.map((s, i) => (
                 <div key={s.titulo} className="servico js-reveal" data-delay={i}>
-                  <img className="servico__icone" src={s.icone} alt="" aria-hidden="true" width={62} height={62} />
+                  <Image className="servico__icone" src={s.icone} alt="" aria-hidden="true" width={62} height={62} />
                   <h3>{s.titulo}</h3>
                   <p>{s.descricao}</p>
                 </div>
@@ -222,15 +233,20 @@ export default function Home() {
 
         {/* CTA FINAL */}
         <section className="closing" id="contato">
-          <p className="eyebrow">Pronto quando você estiver</p>
-          <h2 className="closing__title">
-            Seu contrato pode estar cobrando <em>a mais</em> do que devia.
-          </h2>
-          <p className="closing__sub">
-            Envie o contrato e receba um entendimento técnico do que está sendo
-            cobrado. Sem compromisso.
-          </p>
-          <CtaButton large>Fale com a GRS</CtaButton>
+          <div className="closing__bg" aria-hidden="true">
+            <Image src="/img/fechamento.png" alt="" fill sizes="100vw" style={{ objectFit: "cover" }} />
+          </div>
+          <div className="closing__content">
+            <p className="eyebrow">Pronto quando você estiver</p>
+            <h2 className="closing__title">
+              Seu contrato pode estar cobrando <em>a mais</em> do que devia.
+            </h2>
+            <p className="closing__sub">
+              Envie o contrato e receba um entendimento técnico do que está
+              sendo cobrado. Sem compromisso.
+            </p>
+            <CtaButton large>Fale com a GRS</CtaButton>
+          </div>
         </section>
 
         {/* FOOTER */}

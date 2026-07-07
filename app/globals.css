@@ -29,13 +29,14 @@ body {
 .serif { font-family: var(--serif); font-optical-sizing: auto; }
 
 /* ---------- fundo fixo (atmosfera) ---------- */
+/* A foto do hero entra via next/image (fill) — otimizada, comprimida e
+   redimensionada automaticamente pelo Next, em vez de background-image cru
+   (que ignora qualquer otimização e baixa o PNG inteiro pro visitante). */
 .atmosphere { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
-.atmosphere__hero {
+.atmosphere__hero-wrap { position: absolute; inset: 0; }
+.atmosphere__hero-gradient {
   position: absolute; inset: 0;
-  background-size: cover; background-position: center;
-  background-image:
-    linear-gradient(0deg, rgba(14, 11, 12, 0.72), rgba(14, 11, 12, 0.38)),
-    url("/img/hero.png");
+  background: linear-gradient(0deg, rgba(14, 11, 12, 0.72), rgba(14, 11, 12, 0.38));
 }
 .atmosphere__grain {
   position: absolute; inset: 0; opacity: 0.04; mix-blend-mode: overlay;
@@ -65,7 +66,15 @@ body {
 .nav__links { display: flex; gap: 26px; font-size: 13px; }
 .nav__links a { color: var(--text-primary); opacity: 0.72; text-decoration: none; transition: opacity 0.2s ease; }
 .nav__links a:hover, .nav__links a:focus-visible { opacity: 1; }
-@media (max-width: 640px) { .nav__links { display: none; } }
+.nav__mobile-cta { display: none; }
+@media (max-width: 640px) {
+  .nav__links { display: none; }
+  .nav__mobile-cta {
+    display: inline-flex; align-items: center; font-size: 12.5px; font-weight: 700;
+    padding: 9px 15px; border-radius: 999px; color: #fff; text-decoration: none;
+    background: linear-gradient(180deg, var(--accent-light), var(--accent));
+  }
+}
 
 /* ---------- conteúdo ---------- */
 .content { position: relative; z-index: 1; }
@@ -239,7 +248,7 @@ body {
   font-family: var(--serif); font-weight: 700; color: var(--ink);
   font-size: clamp(26px, 3.6vw, 40px); margin-top: 14px; text-wrap: balance;
 }
-.depoimentos__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.depoimentos__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
 @media (max-width: 860px) { .depoimentos__grid { grid-template-columns: 1fr; } }
 .depoimento {
   background: #ffffff; border: 1px solid var(--border-light); border-radius: 10px;
@@ -268,11 +277,15 @@ body {
 .faq details p { padding: 0 4px 24px; font-size: 15.5px; line-height: 1.7; color: #444; max-width: 68ch; }
 
 /* ---------- fechamento / CTA final ---------- */
-.closing {
+.closing { position: relative; z-index: 1; overflow: hidden; }
+.closing__bg { position: absolute; inset: 0; z-index: 0; }
+.closing__bg::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(14, 11, 12, 0.55), rgba(14, 11, 12, 0.35));
+}
+.closing__content {
   position: relative; z-index: 1; min-height: 72vh; display: flex; flex-direction: column;
   align-items: center; justify-content: center; text-align: center; gap: 30px; padding: 110px 24px;
-  background-size: cover; background-position: center;
-  background-image: linear-gradient(0deg, rgba(14, 11, 12, 0.55), rgba(14, 11, 12, 0.35)), url("/img/fechamento.png");
 }
 .closing__title {
   font-family: var(--serif); font-weight: 700; font-size: clamp(28px, 4.4vw, 52px);

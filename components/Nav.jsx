@@ -1,3 +1,5 @@
+import { CONTATO } from "../lib/content";
+
 export default function Nav() {
   return (
     <nav className="nav" aria-label="Navegação principal">
@@ -11,6 +13,16 @@ export default function Nav() {
         <a href="#faq">Dúvidas</a>
         <a href="#contato">Contato</a>
       </div>
+      {/* No mobile os links somem (não cabem) — sem isso o visitante mobile
+          fica sem nenhuma ação no header. */}
+      <a
+        className="nav__mobile-cta"
+        href={CONTATO.whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WhatsApp
+      </a>
     </nav>
   );
 }
