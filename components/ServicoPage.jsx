@@ -116,7 +116,7 @@ export default function ServicoPage({ data }) {
 
         <section className="closing" id="contato">
           <div className="closing__bg" aria-hidden="true">
-            <Image src="/img/fechamento.webp" alt="" fill sizes="100vw" style={{ objectFit: "cover" }} />
+            <Image src={`${SITE_URL}/img/fechamento.webp`} alt="" fill sizes="100vw" style={{ objectFit: "cover" }} />
           </div>
           <div className="closing__content">
             <p className="eyebrow">Pronto quando você estiver</p>

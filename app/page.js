@@ -6,7 +6,7 @@ import FlipWord from "../components/FlipWord";
 import ScrollFX from "../components/ScrollFX";
 import CtaButton from "../components/CtaButton";
 import Footer from "../components/Footer";
-import { METRICAS, SERVICOS, DEPOIMENTOS, FAQ, MANIFESTO } from "../lib/content";
+import { SITE_URL, METRICAS, SERVICOS, DEPOIMENTOS, FAQ, MANIFESTO } from "../lib/content";
 
 // FAQ em dados estruturados — o mesmo conteúdo visível na página, no formato
 // que o Google usa pra rich results e que assistentes de IA conseguem citar.
@@ -85,7 +85,7 @@ export default function Home() {
               <div className="js-reveal">
                 <Image
                   className="analise__img"
-                  src="/img/analise-tecnica.webp"
+                  src={`${SITE_URL}/img/analise-tecnica.webp`}
                   alt="Contrato de financiamento com cláusula destacada em vermelho durante análise técnica"
                   width={900}
                   height={1125}
@@ -167,7 +167,7 @@ export default function Home() {
           <div className="js-reveal" data-delay="1">
             <Image
               className="sobre__img"
-              src="/img/sobre-missao.webp"
+              src={`${SITE_URL}/img/sobre-missao.webp`}
               alt="Balança da justiça em ambiente escuro com luz vermelha, representando equilíbrio financeiro"
               width={880}
               height={495}
@@ -217,7 +217,7 @@ export default function Home() {
         {/* CTA FINAL */}
         <section className="closing" id="contato">
           <div className="closing__bg" aria-hidden="true">
-            <Image src="/img/fechamento.webp" alt="" fill sizes="100vw" style={{ objectFit: "cover" }} />
+            <Image src={`${SITE_URL}/img/fechamento.webp`} alt="" fill sizes="100vw" style={{ objectFit: "cover" }} />
           </div>
           <div className="closing__content">
             <p className="eyebrow">Pronto quando você estiver</p>
