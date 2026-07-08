@@ -8,7 +8,7 @@ export default function Atmosphere() {
     <div className="atmosphere" aria-hidden="true">
       <div className="atmosphere__hero-wrap">
         <Image
-          src="/img/hero.png"
+          src="/img/hero.webp"
           alt=""
           fill
           priority

@@ -1,5 +1,7 @@
 import { SITE_URL } from "../lib/content";
 
+export const dynamic = "force-static";
+
 // Libera explicitamente os crawlers de busca E os de IA (GPTBot/ChatGPT,
 // ClaudeBot, Google-Extended/Gemini, PerplexityBot) — pra GRS aparecer nas
 // respostas dos assistentes, eles precisam poder ler o site.

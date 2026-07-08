@@ -1,5 +1,7 @@
 import { SITE_URL, PAGINAS_SERVICO } from "../lib/content";
 
+export const dynamic = "force-static";
+
 export default function sitemap() {
   const now = new Date();
   return [
