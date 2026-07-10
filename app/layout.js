@@ -58,6 +58,23 @@ const organizationJsonLd = {
   description:
     "Empresa especializada em análise e revisão técnica de contratos de financiamento e empréstimo. Identifica juros abusivos, tarifas indevidas e cláusulas irregulares em contratos de veículos, imóveis e crédito, atendendo pessoa física e jurídica em todo o Brasil.",
   telephone: CONTATO.telefoneE164,
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: CONTATO.telefoneE164,
+      contactType: "customer service",
+      contactOption: "WhatsApp",
+      areaServed: "BR",
+      availableLanguage: "Portuguese",
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: CONTATO.telefoneFixoE164,
+      contactType: "customer service",
+      areaServed: "BR",
+      availableLanguage: "Portuguese",
+    },
+  ],
   email: CONTATO.email,
   taxID: CONTATO.cnpj,
   address: {

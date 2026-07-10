@@ -32,6 +32,11 @@ export default function Footer() {
               </a>
             </li>
             <li>
+              <a href={`tel:${CONTATO.telefoneFixoE164}`}>
+                Telefone {CONTATO.telefoneFixo}
+              </a>
+            </li>
+            <li>
               <a href={`mailto:${CONTATO.email}`}>{CONTATO.email}</a>
             </li>
             <li>{CONTATO.horario}</li>
