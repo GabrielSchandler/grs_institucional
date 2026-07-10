@@ -273,6 +273,9 @@ body {
 @media (max-width: 820px) { .sobre { grid-template-columns: 1fr; padding: 80px 24px; } }
 
 /* ---------- depoimentos ---------- */
+#depoimentos {
+  background: #0b0705 url("/img/depoimentos-textura.webp") center / cover no-repeat;
+}
 .depoimentos__head { max-width: 580px; margin-bottom: 48px; }
 .depoimentos__title {
   font-family: var(--serif); font-weight: 700; color: var(--ink);
