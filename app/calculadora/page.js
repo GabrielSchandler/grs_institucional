@@ -47,10 +47,6 @@ export default function CalculadoraPage() {
 
         <section className="floating-wrap">
           <div className="float-card js-tilt">
-            <p className="eyebrow">Seus dados</p>
-            <h2 className="servicos__title" style={{ marginBottom: 36 }}>
-              Alguns dados do seu contrato pra gente já chegar preparado.
-            </h2>
             <CalculadoraForm />
           </div>
         </section>
