@@ -18,6 +18,7 @@ export default function Footer() {
         <div>
           <h4>Tipos de contrato</h4>
           <ul>
+            <li><Link href="/calculadora">Calculadora de pré-avaliação</Link></li>
             <li><Link href="/revisao-financiamento-veiculo">Financiamento de veículo</Link></li>
             <li><Link href="/revisao-financiamento-imovel">Financiamento imobiliário</Link></li>
             <li><Link href="/revisao-emprestimo">Empréstimo e crédito</Link></li>

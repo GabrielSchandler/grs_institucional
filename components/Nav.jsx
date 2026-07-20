@@ -9,6 +9,7 @@ import { CONTATO } from "../lib/content";
 const LINKS = [
   { href: "/#analise", label: "Análise" },
   { href: "/#servicos", label: "Serviços" },
+  { href: "/calculadora", label: "Calculadora" },
   { href: "/#sobre", label: "Sobre" },
   { href: "/#faq", label: "Dúvidas" },
   { href: "/#contato", label: "Contato" },
