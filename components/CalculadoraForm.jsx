@@ -178,9 +178,9 @@ export default function CalculadoraForm() {
         </p>
         <a className="cta cta--large calc__submit" href={whatsappHref} target="_blank" rel="noopener noreferrer">
           <span className="cta__fill" aria-hidden="true" />
-          <span className="cta__label cta__label--default">Falar com a GRS agora</span>
+          <span className="cta__label cta__label--default">Fazer minha análise sem compromisso</span>
           <span className="cta__label cta__label--hover" aria-hidden="true">
-            Ir para o WhatsApp <span>→</span>
+            Continuar no WhatsApp <span>→</span>
           </span>
         </a>
         <button type="button" className="calc__editar" onClick={() => setFase("perguntas")}>

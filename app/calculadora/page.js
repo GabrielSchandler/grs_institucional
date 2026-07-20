@@ -40,8 +40,8 @@ export default function CalculadoraPage() {
           <p className="eyebrow">Pré-avaliação do contrato</p>
           <h1 className="hero__title">Entenda se o seu contrato vale uma análise técnica.</h1>
           <p className="hero__sub">
-            Preencha os dados abaixo. Ao final, você envia direto para o
-            nosso time pelo WhatsApp — sem compromisso.
+            Preencha os dados abaixo para calcular o seu contrato e
+            descobrir possíveis juros e taxas abusivas.
           </p>
         </section>
 
