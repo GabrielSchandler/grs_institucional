@@ -19,6 +19,8 @@ const SERVICO_LINKS = [
   { href: "/revisao-financiamento-veiculo", label: "Financiamento de veículo" },
   { href: "/revisao-financiamento-imovel", label: "Financiamento imobiliário" },
   { href: "/revisao-emprestimo", label: "Empréstimo e crédito" },
+  { href: "/revisao-consignado", label: "Consignado" },
+  { href: "/revisao-credito-empresarial", label: "Crédito empresarial" },
 ];
 
 export default function Nav() {

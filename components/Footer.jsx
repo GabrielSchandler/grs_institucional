@@ -22,6 +22,8 @@ export default function Footer() {
             <li><Link href="/revisao-financiamento-veiculo">Financiamento de veículo</Link></li>
             <li><Link href="/revisao-financiamento-imovel">Financiamento imobiliário</Link></li>
             <li><Link href="/revisao-emprestimo">Empréstimo e crédito</Link></li>
+            <li><Link href="/revisao-consignado">Consignado</Link></li>
+            <li><Link href="/revisao-credito-empresarial">Crédito empresarial</Link></li>
           </ul>
         </div>
         <div>

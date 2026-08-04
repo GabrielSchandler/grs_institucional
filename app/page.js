@@ -146,11 +146,13 @@ export default function Home() {
               A GRS Soluções é uma empresa especializada em análise e revisão de
               contratos de{" "}
               <Link href="/revisao-financiamento-veiculo">financiamento de veículo</Link>,{" "}
-              <Link href="/revisao-financiamento-imovel">financiamento de imóvel</Link> e{" "}
-              <Link href="/revisao-emprestimo">empréstimo</Link>. Há mais de 10
-              anos identificamos juros abusivos, tarifas indevidas e cláusulas
-              irregulares — atendendo pessoa física e jurídica em todo o
-              Brasil.
+              <Link href="/revisao-financiamento-imovel">financiamento de imóvel</Link>,{" "}
+              <Link href="/revisao-emprestimo">empréstimo</Link>,{" "}
+              <Link href="/revisao-consignado">consignado</Link> e{" "}
+              <Link href="/revisao-credito-empresarial">crédito empresarial</Link>. Há
+              mais de 10 anos identificamos juros abusivos, tarifas indevidas e
+              cláusulas irregulares — atendendo pessoa física e jurídica em
+              todo o Brasil.
             </p>
             <p className="sobre__body">
               Nossa missão é defender o consumidor financeiro com excelência
