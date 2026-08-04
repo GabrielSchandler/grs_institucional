@@ -10,7 +10,10 @@ const nextConfig = {
   // grs_institucional/ (subcaminho) — sem isso, o segundo carrega só o HTML,
   // sem estilo, porque os caminhos absolutos ("/_next/...") apontariam pro
   // lugar errado nesse subcaminho.
-  assetPrefix: "https://www.grssolucao.com.br",
+  // Só entra fora do dev: com o prefixo, "next dev" pediria os assets pro
+  // domínio de produção (que não tem os chunks do build local) e a página
+  // local ficaria sem estilo nenhum.
+  assetPrefix: process.env.NODE_ENV === "development" ? undefined : "https://www.grssolucao.com.br",
 };
 
 export default nextConfig;
