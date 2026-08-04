@@ -10,6 +10,8 @@
   --ink: #111111;
   --ink-soft: #6b6b6b;
   --border-light: #e4e1dc;
+  --success: #15803d;
+  --success-bg: #e8f5ec;
   --serif: var(--font-fraunces), Georgia, serif;
   --sans: var(--font-inter), -apple-system, "Segoe UI", sans-serif;
 }
@@ -427,6 +429,19 @@ body {
 }
 .calc__resumo-lista span { color: var(--ink-soft); }
 .calc__resumo-lista strong { color: var(--ink); font-weight: 600; text-align: right; }
+
+.calc__selo {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: var(--success-bg); border: 1px solid rgba(21, 128, 61, 0.25);
+  color: var(--success); font-family: var(--sans); font-weight: 600; font-size: 13.5px;
+  padding: 9px 18px; border-radius: 999px; margin-bottom: 18px;
+}
+.calc__selo-icon {
+  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+  width: 18px; height: 18px; border-radius: 50%; background: var(--success);
+  color: #fff; font-size: 11px; line-height: 1;
+}
+
 .calc__resultado-nota { font-size: 14.5px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 28px; max-width: 52ch; }
 .calc__editar {
   display: block; margin: 16px auto 0; font-family: var(--sans); font-size: 13px;

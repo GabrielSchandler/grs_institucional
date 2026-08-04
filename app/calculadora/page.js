@@ -27,10 +27,28 @@ const faqJsonLd = {
   })),
 };
 
+// Descrição fiel ao que a ferramenta faz de verdade: recebe os dados do
+// contrato, roda um teste de estresse real sobre eles (client-side, em
+// CalculadoraForm.jsx) e devolve um indício qualitativo de margem de
+// redução — não um valor em R$ fechado, que só sai da análise humana.
+const webAppJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Calculadora de Revisão de Contrato — GRS Soluções",
+  url: "https://www.grssolucao.com.br/calculadora",
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "Web",
+  description:
+    "Ferramenta de pré-avaliação que processa os dados informados sobre o contrato de financiamento ou empréstimo e identifica indícios de possível margem de redução, antes do encaminhamento para análise técnica humana da GRS.",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "BRL" },
+  provider: { "@type": "Organization", name: "GRS Soluções", url: "https://www.grssolucao.com.br" },
+};
+
 export default function CalculadoraPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJsonLd) }} />
       <ScrollFX />
       <Atmosphere />
       <Nav />

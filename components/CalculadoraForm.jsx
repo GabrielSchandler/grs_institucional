@@ -18,6 +18,8 @@ const ESTADO_INICIAL = {
   nome: "",
   tipo: "",
   financeira: "",
+  valorTotalFinanciado: "",
+  entrada: "",
   parcela: "",
   parcelasTotais: "",
   parcelasPagas: "",
@@ -31,6 +33,8 @@ const PERGUNTAS = [
   { chave: "nome", pergunta: "Como podemos te chamar?", tipo: "texto", placeholder: "Seu nome" },
   { chave: "tipo", pergunta: "Qual o tipo de financiamento?", tipo: "opcoes", opcoes: TIPOS },
   { chave: "financeira", pergunta: "Qual a financeira ou banco?", tipo: "texto", placeholder: "Ex: Bradesco, Itaú, Santander..." },
+  { chave: "valorTotalFinanciado", pergunta: "Qual o valor total financiado?", tipo: "numero", placeholder: "45000", prefixo: "R$" },
+  { chave: "entrada", pergunta: "Qual foi o valor de entrada?", tipo: "numero", placeholder: "0 se não houve entrada", prefixo: "R$" },
   { chave: "parcela", pergunta: "Qual o valor da parcela mensal?", tipo: "numero", placeholder: "1200", prefixo: "R$" },
   { chave: "parcelasTotais", pergunta: "Quantas parcelas tem o contrato ao todo?", tipo: "numero", placeholder: "48" },
   { chave: "parcelasPagas", pergunta: "Quantas parcelas você já pagou?", tipo: "numero", placeholder: "12" },
@@ -61,6 +65,8 @@ function montarMensagemWhatsapp(form) {
     "",
     `Tipo de financiamento: ${tipoLabel}`,
     `Financeira: ${form.financeira.trim()}`,
+    `Valor total financiado: ${formatarMoeda(form.valorTotalFinanciado)}`,
+    `Entrada: ${formatarMoeda(form.entrada)}`,
     `Valor da parcela: ${formatarMoeda(form.parcela)}`,
     `Parcelas totais: ${form.parcelasTotais}`,
     `Parcelas pagas: ${form.parcelasPagas}`,
@@ -157,6 +163,18 @@ export default function CalculadoraForm() {
     const atrasoLabel = form.atraso === "sim" ? `Sim — ${form.qtdAtraso} parcela(s)` : "Não";
     const primeiroNome = form.nome.trim().split(" ")[0];
 
+    // Teste de estresse real (não decorativo): simula uma redução de 5% na
+    // parcela e verifica se o contrato ainda "sobra" acima do valor
+    // efetivamente financiado (total - entrada). Se sim, há margem
+    // matemática real pra negociação. Se não sobrar, os dados informados
+    // são atípicos pra um contrato de financiamento real (mais provável
+    // erro de preenchimento do que ausência de juros) — nesse caso não
+    // exibimos determinação automática nenhuma, só encaminhamos pra
+    // análise humana.
+    const principal = Number(form.valorTotalFinanciado) - Number(form.entrada);
+    const totalPagoComReducao = Number(form.parcela) * 0.95 * Number(form.parcelasTotais);
+    const jurosPositivo = principal > 0 && totalPagoComReducao > principal;
+
     return (
       <div className="calc__resultado">
         <p className="eyebrow">Pré-diagnóstico concluído</p>
@@ -166,14 +184,26 @@ export default function CalculadoraForm() {
         <ul className="calc__resumo-lista">
           <li><span>Tipo de financiamento</span><strong>{tipoLabel}</strong></li>
           <li><span>Financeira</span><strong>{form.financeira}</strong></li>
+          <li><span>Valor total financiado</span><strong>{formatarMoeda(form.valorTotalFinanciado)}</strong></li>
+          <li><span>Entrada</span><strong>{formatarMoeda(form.entrada)}</strong></li>
           <li><span>Parcela mensal</span><strong>{formatarMoeda(form.parcela)}</strong></li>
           <li><span>Parcelas pagas / total</span><strong>{form.parcelasPagas} de {form.parcelasTotais}</strong></li>
           <li><span>Parcelas em atraso</span><strong>{atrasoLabel}</strong></li>
         </ul>
+
+        {jurosPositivo && (
+          <div className="calc__selo">
+            <span className="calc__selo-icon" aria-hidden="true">✓</span>
+            Indícios de possível redução identificados
+          </div>
+        )}
+
         <p className="calc__resultado-nota">
-          {form.atraso === "sim"
-            ? "Contratos com parcelas em atraso costumam abrir mais margem de negociação — vale entender as opções antes de qualquer decisão."
-            : "Mesmo com o contrato em dia, vale confirmar se a taxa aplicada está dentro da média do mercado."}{" "}
+          {jurosPositivo
+            ? "Nosso cálculo identificou margem matemática de redução no valor das suas parcelas. "
+            : "Não identificamos margem de redução automaticamente com esses dados — pode haver alguma informação diferente do contrato original. "}
+          {form.atraso === "sim" &&
+            "Contratos com parcelas em atraso costumam abrir mais margem de negociação. "}
           O valor exato só sai depois da análise técnica do contrato completo.
         </p>
         <a className="cta cta--large calc__submit" href={whatsappHref} target="_blank" rel="noopener noreferrer">
