@@ -465,6 +465,225 @@ body {
 .legal-page ul { padding-left: 20px; margin-top: 8px; }
 .legal-page a { color: var(--accent); }
 
+/* ---------- blog: categorias ---------- */
+.blog-cats { margin-top: 34px; }
+.blog-cats--rodape { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border-light); }
+.blog-cats__lista { display: flex; flex-wrap: wrap; gap: 10px; }
+.blog-cat-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 600; text-decoration: none;
+  padding: 9px 16px; border-radius: 999px;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.blog-cat-chip span {
+  font-size: 11px; font-weight: 700; opacity: 0.55;
+  padding-left: 8px; border-left: 1px solid currentColor;
+}
+.blog-cat-chip:hover, .blog-cat-chip:focus-visible {
+  border-color: var(--accent-light); background: rgba(195, 18, 48, 0.14);
+}
+/* Dentro do card claro o chip precisa inverter — no fundo off-white o
+   estilo escuro fica ilegível. */
+.float-card .blog-cat-chip {
+  color: var(--ink); background: #fff; border-color: var(--border-light);
+}
+.float-card .blog-cat-chip:hover, .float-card .blog-cat-chip:focus-visible {
+  border-color: var(--accent); background: #fff;
+}
+
+/* ---------- blog: listagem ---------- */
+.blog-destaque {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
+  text-decoration: none; color: inherit;
+}
+.blog-destaque__img {
+  position: relative; width: 100%; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 40px 70px -30px rgba(20, 15, 10, 0.28);
+}
+.blog-destaque__title {
+  font-family: var(--serif); font-weight: 700; color: var(--ink);
+  font-size: clamp(24px, 3.2vw, 36px); line-height: 1.15; margin-bottom: 16px; text-wrap: balance;
+}
+.blog-destaque:hover .blog-destaque__title { color: var(--accent); }
+@media (max-width: 860px) { .blog-destaque { grid-template-columns: 1fr; gap: 26px; } }
+
+.blog-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
+  margin-top: 56px; padding-top: 48px; border-top: 1px solid var(--border-light);
+}
+/* Quando a grade abre o card (arquivo de categoria), não há nada acima
+   dela pra separar. */
+.blog-grid--topo { margin-top: 0; padding-top: 0; border-top: none; }
+.blog-destaque + .blog-grid { margin-top: 56px; }
+.float-card > .eyebrow + .servicos__title + .blog-grid { margin-top: 0; padding-top: 0; border-top: none; }
+@media (max-width: 900px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .blog-grid { grid-template-columns: 1fr; } }
+
+.blog-card {
+  display: flex; flex-direction: column; text-decoration: none; color: inherit;
+  background: #ffffff; border: 1px solid var(--border-light); border-radius: 10px;
+  overflow: hidden; transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.blog-card:hover, .blog-card:focus-visible { border-color: var(--accent); transform: translateY(-3px); }
+.blog-card__img { position: relative; width: 100%; aspect-ratio: 16 / 10; }
+.blog-card__body { padding: 24px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.blog-card__categoria {
+  font-size: 11.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent);
+}
+.blog-card__title {
+  font-family: var(--serif); font-weight: 600; font-size: 19px; line-height: 1.25; color: var(--ink);
+}
+.blog-card__resumo { font-size: 14px; line-height: 1.6; color: var(--ink-soft); }
+.blog-card__meta { font-size: 12.5px; color: var(--ink-soft); margin-top: auto; padding-top: 6px; }
+
+/* ---------- blog: artigo ---------- */
+.artigo__header { padding-bottom: 40px; }
+.artigo__breadcrumb { font-size: 13px; color: var(--sub); margin-bottom: 20px; }
+.artigo__breadcrumb a { color: var(--sub); text-decoration: none; }
+.artigo__breadcrumb a:hover, .artigo__breadcrumb a:focus-visible { color: var(--text-primary); }
+.artigo__breadcrumb span { opacity: 0.4; margin: 0 4px; }
+.artigo__meta { font-size: 13.5px; color: var(--text-dim); margin-top: 26px; }
+
+.artigo__capa-wrap { position: relative; z-index: 1; display: flex; justify-content: center; padding: 0 24px; }
+.artigo__capa {
+  position: relative; width: 100%; max-width: 1100px; aspect-ratio: 21 / 9;
+  border-radius: 18px; overflow: hidden; box-shadow: 0 60px 100px -50px rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 640px) { .artigo__capa { aspect-ratio: 16 / 10; border-radius: 12px; } }
+
+.artigo__card { max-width: 1080px; }
+
+/* Bloco de resposta direta no topo. É a primeira coisa que um assistente
+   de IA extrai quando alguém pergunta sobre o tema — por isso vem antes
+   do sumário e do corpo, em texto corrido e autossuficiente. */
+.artigo__resposta {
+  background: #fff; border: 1px solid var(--border-light); border-left: 3px solid var(--accent);
+  border-radius: 8px; padding: 26px 28px; margin-bottom: 48px;
+}
+.artigo__resposta-rotulo {
+  font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 10px;
+}
+.artigo__resposta-texto { font-size: 16.5px; line-height: 1.65; color: var(--ink); }
+
+.artigo__layout { display: grid; grid-template-columns: 220px 1fr; gap: 56px; align-items: start; }
+/* Item de grid nasce com min-width:auto, ou seja, nunca encolhe abaixo do
+   seu conteúdo mais largo. Sem o min-width:0, a tabela (que é nowrap e rola
+   sozinha) estica a coluna inteira e a PÁGINA ganha scroll horizontal no
+   celular — em vez de só a tabela rolar. */
+.artigo__layout > * { min-width: 0; }
+@media (max-width: 900px) { .artigo__layout { grid-template-columns: 1fr; gap: 34px; } }
+
+.artigo__sumario { position: sticky; top: 100px; font-size: 13.5px; }
+@media (max-width: 900px) {
+  .artigo__sumario {
+    position: static; background: #fff; border: 1px solid var(--border-light);
+    border-radius: 8px; padding: 22px 24px;
+  }
+}
+.artigo__sumario-rotulo {
+  font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-soft); margin-bottom: 14px;
+}
+.artigo__sumario ol { list-style: none; counter-reset: sumario; }
+.artigo__sumario li { counter-increment: sumario; margin-bottom: 11px; line-height: 1.4; }
+.artigo__sumario li::before { content: counter(sumario) "."; color: var(--accent); margin-right: 7px; font-weight: 600; }
+.artigo__sumario a { color: var(--ink-soft); text-decoration: none; }
+.artigo__sumario a:hover, .artigo__sumario a:focus-visible { color: var(--accent); }
+
+/* A medida de leitura (68ch) fica nos elementos de texto, não no contêiner —
+   assim tabela e box de destaque usam a largura inteira da coluna em vez de
+   ficarem espremidos e cortados dentro do limite do parágrafo. */
+.artigo__corpo { color: var(--ink); }
+.artigo__corpo > p,
+.artigo__corpo > ul,
+.artigo__corpo > ol,
+.artigo__corpo > h2,
+.artigo__corpo > h3,
+.artigo__corpo > blockquote { max-width: 68ch; }
+.artigo__corpo > *:first-child { margin-top: 0; }
+.artigo__corpo h2 {
+  font-family: var(--serif); font-weight: 700; font-size: clamp(23px, 2.8vw, 30px);
+  line-height: 1.2; margin: 56px 0 18px; scroll-margin-top: 96px; text-wrap: balance;
+}
+.artigo__corpo h3 {
+  font-family: var(--serif); font-weight: 600; font-size: 20px;
+  margin: 36px 0 12px; scroll-margin-top: 96px;
+}
+.artigo__corpo p { font-size: 16.5px; line-height: 1.75; color: #333; margin-bottom: 20px; }
+.artigo__corpo ul, .artigo__corpo ol { margin: 0 0 22px 22px; }
+.artigo__corpo li { font-size: 16.5px; line-height: 1.75; color: #333; margin-bottom: 9px; }
+.artigo__corpo a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.artigo__corpo a:hover, .artigo__corpo a:focus-visible { color: var(--accent-deep); }
+.artigo__corpo strong { color: var(--ink); font-weight: 700; }
+.artigo__corpo blockquote {
+  border-left: 3px solid var(--accent); padding: 4px 0 4px 22px; margin: 30px 0;
+  font-family: var(--serif); font-size: 19px; line-height: 1.55; color: var(--ink); font-style: italic;
+}
+.artigo__corpo img { width: 100%; height: auto; border-radius: 10px; display: block; }
+/* A figura usa a largura inteira da coluna, não a medida de leitura — é o
+   respiro visual do texto longo. */
+.artigo__figura { margin: 44px 0; }
+.artigo__figura figcaption {
+  margin-top: 12px; font-size: 13.5px; line-height: 1.6; color: var(--ink-soft);
+  padding-left: 14px; border-left: 2px solid var(--accent);
+}
+.artigo__corpo hr { border: none; border-top: 1px solid var(--border-light); margin: 48px 0; }
+
+/* Tabela comparativa. O scroll fica no contêiner, não na tabela: assim a
+   tabela ocupa 100% da coluna e o texto das células quebra normalmente. Em
+   telas estreitas o contêiner rola sozinho — a página nunca ganha scroll
+   horizontal por causa disso. */
+.artigo__corpo .tabela-wrap { overflow-x: auto; max-width: 100%; margin: 30px 0; }
+.artigo__corpo table {
+  width: 100%; border-collapse: collapse; font-size: 15px; min-width: 460px;
+}
+.artigo__corpo th, .artigo__corpo td {
+  border: 1px solid var(--border-light); padding: 12px 16px; text-align: left; vertical-align: top;
+  line-height: 1.5;
+}
+.artigo__corpo th { background: #f2efec; font-weight: 700; color: var(--ink); }
+.artigo__corpo td { color: #333; }
+.artigo__corpo tbody tr:nth-child(even) { background: #faf9f7; }
+
+.artigo__anchor {
+  color: var(--border-light); text-decoration: none; margin-left: 10px;
+  font-size: 0.7em; opacity: 0; transition: opacity 0.2s ease;
+}
+.artigo__corpo h2:hover .artigo__anchor,
+.artigo__corpo h3:hover .artigo__anchor,
+.artigo__anchor:focus-visible { opacity: 1; }
+
+/* Box de destaque dentro do corpo do artigo. Escrito no markdown como
+   <aside class="callout"> — o pipeline roda com html:true. */
+.artigo__corpo .callout {
+  background: #fff; border: 1px solid var(--border-light);
+  border-left: 3px solid var(--accent); border-radius: 8px;
+  padding: 22px 26px; margin: 32px 0;
+}
+.artigo__corpo .callout p { font-size: 15.5px; margin-bottom: 12px; }
+.artigo__corpo .callout p:last-child { margin-bottom: 0; }
+.artigo__corpo .callout strong { color: var(--accent); }
+.artigo__corpo .callout ul, .artigo__corpo .callout ol { margin-bottom: 0; }
+
+.artigo__fontes { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--border-light); }
+.artigo__fontes h2 {
+  font-family: var(--serif); font-weight: 700; font-size: 22px; color: var(--ink); margin-bottom: 16px;
+}
+.artigo__fontes ul { list-style: none; }
+.artigo__fontes li { font-size: 14.5px; line-height: 1.7; color: var(--ink-soft); margin-bottom: 9px; }
+.artigo__fontes a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+.artigo__aviso {
+  margin-top: 36px; padding: 22px 24px; border-radius: 8px;
+  background: #f2efec; border: 1px solid var(--border-light);
+}
+.artigo__aviso p { font-size: 13.5px; line-height: 1.7; color: var(--ink-soft); }
+.artigo__aviso strong { color: var(--ink); }
+
 /* ---------- reveal genérico ---------- */
 .js-reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .js-reveal.in-view { opacity: 1; transform: translateY(0); }

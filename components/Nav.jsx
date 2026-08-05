@@ -10,6 +10,7 @@ const LINKS = [
   { href: "/#analise", label: "Análise" },
   { href: "/#servicos", label: "Serviços" },
   { href: "/calculadora", label: "Calculadora" },
+  { href: "/blog/", label: "Blog" },
   { href: "/#sobre", label: "Sobre" },
   { href: "/#faq", label: "Dúvidas" },
   { href: "/#contato", label: "Contato" },
