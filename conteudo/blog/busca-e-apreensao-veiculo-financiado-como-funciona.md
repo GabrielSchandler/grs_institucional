@@ -33,7 +33,10 @@ tags:
 imagem: /img/blog/busca-e-apreensao-veiculo-financiado-como-funciona/capa.webp
 imagemAlt: "Chave de veículo sobre documento em mesa escura, iluminada por uma luz vermelha rasante"
 
-relacionados: []
+relacionados:
+  - atrasei-parcela-financiamento-o-que-acontece
+  - veiculo-apreendido-vendido-saldo-devedor-remanescente
+  - quitacao-antecipada-financiamento-desconto-juros
 
 faq:
   - pergunta: "Já paguei mais de 70% do financiamento. O banco ainda pode pedir a busca e apreensão?"
@@ -56,6 +59,18 @@ faq:
     resposta: "Não automaticamente. O Decreto-Lei 911/69 não prevê, para o veículo financiado em alienação fiduciária, uma exceção equivalente à impenhorabilidade de instrumentos de trabalho aplicada em outros contextos — o bem é o objeto da garantia contratada. O que a situação muda é a urgência: quem depende do veículo para gerar renda perde, com a apreensão, justamente a capacidade de pagar a dívida, o que torna o custo de esperar muito mais alto."
   - pergunta: "E se o veículo não for encontrado pelo oficial de justiça?"
     resposta: "A cobrança não se encerra. O artigo 4º do Decreto-Lei 911/69 faculta ao credor requerer, nos mesmos autos, a conversão do pedido de busca e apreensão em ação executiva. A discussão deixa de girar em torno daquele bem específico e passa a mirar o valor da dívida, com alcance sobre o patrimônio do devedor de modo geral."
+  - pergunta: "Podem apreender o veículo sem nenhum aviso prévio?"
+    resposta: "Não. A comprovação da mora é requisito indispensável (Súmula 72 do STJ) e precede o pedido. O que ocorre é que a liminar é concedida antes de o devedor ser ouvido no processo — então, embora tenha havido notificação anterior, o primeiro contato com o procedimento em si costuma ser o oficial de justiça."
+  - pergunta: "Existe um número mínimo de parcelas atrasadas para o banco agir?"
+    resposta: "Não há prazo nem quantidade fixados em lei. A prática varia por instituição e por perfil de contrato. O requisito legal não é um tempo mínimo de atraso, e sim a mora comprovada."
+  - pergunta: "Posso negociar depois que a ação já foi ajuizada?"
+    resposta: "É possível, mas a posição de negociação piora bastante. Antes do ajuizamento há mais tempo e mais alternativas; depois da apreensão, o prazo é de 5 dias, o valor exigido é integral e as diárias de pátio correm."
+  - pergunta: "Posso vender o veículo que está em alienação fiduciária?"
+    resposta: "Não sem quitação e sem anuência do credor. O bem tem gravame e a propriedade é da instituição financeira até o fim do contrato. Alienar nessas condições cria complicações para o vendedor e também para o comprador, que adquire um bem gravado."
+  - pergunta: "O que acontece com objetos pessoais que estavam dentro do carro?"
+    resposta: "A apreensão recai sobre o veículo, não sobre bens pessoais que estejam nele. Por isso o registro do que havia no interior do carro no momento da apreensão costuma ser relevante, assim como o registro do estado de conservação do próprio veículo."
+  - pergunta: "Posso questionar a apreensão depois que ela já ocorreu?"
+    resposta: "Sim, dentro do processo. Falhas na comprovação da mora — notificação enviada a endereço diverso do contratual, por exemplo — e divergências na composição do valor cobrado são pontos que podem ser discutidos. Se a liminar é revogada depois de o veículo já ter sido vendido, a restituição se converte em ressarcimento pela Tabela FIPE."
   - pergunta: "Leasing tem o mesmo procedimento?"
     resposta: "Não exatamente. No arrendamento mercantil, a medida cabível é a ação de reintegração de posse, e não a busca e apreensão, porque a relação jurídica é de arrendamento e não de alienação fiduciária. A Lei 13.043/2014 aproximou os dois ritos, estendendo ao leasing procedimentos do Decreto-Lei 911/69, e o STJ admite a conversão da reintegração em execução quando o bem não é localizado. Identificar corretamente a modalidade do contrato é o primeiro passo de qualquer análise."
 
@@ -95,6 +110,21 @@ A surpresa nesse momento raramente vem da dívida. Quem atrasou sabe que atrasou
 
 Este guia explica como a busca e apreensão de veículo financiado funciona do começo ao fim, o que mudou desde que a via extrajudicial foi autorizada, e por que três ideias muito comuns sobre o assunto costumam custar exatamente aquilo que se pretendia proteger.
 
+## O processo em seis etapas
+
+<div class="fluxo">
+<ol>
+<li><span class="fluxo__num">1</span><div class="fluxo__passo"><strong>Parcela em atraso</strong><span>O atraso por si só ainda não autoriza a apreensão. Não existe número mínimo de parcelas fixado em lei — a decisão de agir é do credor.</span></div></li>
+<li><span class="fluxo__num">2</span><div class="fluxo__passo"><strong>Constituição e comprovação da mora</strong><span>Etapa obrigatória (Súmula 72 do STJ). Feita por carta registrada com aviso de recebimento ao endereço do contrato, notificação em cartório ou protesto do título.</span></div></li>
+<li><span class="fluxo__num">3</span><div class="fluxo__passo"><strong>O credor escolhe a via</strong><div class="fluxo__vias"><div class="fluxo__via"><em>Judicial</em><span>Ação de busca e apreensão. O juiz concede a liminar antes de o devedor ser ouvido.</span></div><div class="fluxo__via"><em>Extrajudicial</em><span>Cartório de registro de títulos e documentos. Só existe se o contrato tiver cláusula específica.</span></div></div></div></li>
+<li><span class="fluxo__num">4</span><div class="fluxo__passo"><strong>Apreensão do veículo</strong><span>Costuma ser o primeiro contato concreto de quem está devendo com o procedimento.</span></div></li>
+<li><span class="fluxo__num">5</span><div class="fluxo__passo"><strong>Prazo de 5 dias</strong><span>Contado da execução da liminar. Nele é preciso pagar a <strong>integralidade da dívida</strong> apresentada pelo credor — incluindo as parcelas ainda não vencidas (Tema 722 do STJ), e não apenas o atraso.</span></div></li>
+<li><span class="fluxo__num">6</span><div class="fluxo__passo"><strong>Desfecho</strong><div class="fluxo__saidas"><div class="fluxo__saida fluxo__saida--ok"><em>Pagou no prazo</em><span>O veículo é restituído livre de ônus.</span></div><div class="fluxo__saida fluxo__saida--perda"><em>Não pagou</em><span>A propriedade se consolida com o credor, que pode vender o bem. Sobrando valor, ele vai ao devedor; faltando, a cobrança continua.</span></div></div></div></li>
+</ol>
+</div>
+
+As seções a seguir detalham cada uma dessas etapas — e os três pontos em que a maioria das pessoas erra.
+
 ## Por que o veículo pode ser retomado: a alienação fiduciária
 
 Quase todo financiamento de veículo no Brasil é feito com **alienação fiduciária em garantia**, disciplinada pelo Decreto-Lei 911/1969.
@@ -116,6 +146,16 @@ Segundo o Decreto-Lei 911/69, essa comprovação pode ser feita por três caminh
 - **Carta registrada com aviso de recebimento**, enviada ao endereço indicado no contrato
 - **Notificação extrajudicial** por meio do Cartório de Títulos e Documentos
 - **Protesto** do título
+
+Cada estágio do processo abre e fecha portas diferentes:
+
+| Situação | O que pode acontecer | O que ainda é possível |
+| --- | --- | --- |
+| Parcela vencida, sem notificação | Cobrança, juros de mora, negativação | Negociar diretamente; o contrato ainda pode ser analisado com calma |
+| Mora comprovada por notificação | O credor já pode pedir a busca e apreensão | Regularizar antes do pedido, discutindo o valor cobrado |
+| Liminar deferida | O veículo pode ser apreendido a qualquer momento | Reunir a documentação e avaliar a composição do débito |
+| Veículo apreendido | Correm 5 dias e as diárias de pátio | Pagar a integralidade da dívida para reaver o bem |
+| Prazo vencido sem pagamento | Propriedade consolidada, venda autorizada | Discutir o saldo remanescente e a prestação de contas da venda |
 
 Aqui aparece o primeiro detalhe que costuma pegar as pessoas de surpresa.
 
@@ -286,3 +326,5 @@ A busca e apreensão de veículo financiado é um procedimento desenhado para se
 As três ideias mais repetidas sobre o tema estão erradas: ter pago mais de 70% não impede a apreensão, não ter recebido a carta pessoalmente não invalida a notificação, e negociar depois da apreensão é uma posição muito pior do que negociar antes dela.
 
 O intervalo entre o primeiro atraso e a apreensão é curto, mas é nele que existe a maior parte das alternativas. Entender o que está no contrato antes que esse intervalo se feche costuma fazer diferença no resultado.
+
+Sobre o que vem antes desse ponto, veja [o que acontece quando a parcela atrasa](/blog/atrasei-parcela-financiamento-o-que-acontece/). Sobre o que vem depois, [a venda do veículo e o saldo remanescente](/blog/veiculo-apreendido-vendido-saldo-devedor-remanescente/).

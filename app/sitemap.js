@@ -28,6 +28,12 @@ export default function sitemap() {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    {
+      url: `${SITE_URL}/blog/glossario`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
     ...categorias.map((c) => ({
       url: `${SITE_URL}/blog/categoria/${c.slug}`,
       lastModified: new Date(c.artigos[0].atualizadoEm),

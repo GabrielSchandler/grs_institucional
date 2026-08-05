@@ -81,6 +81,9 @@ export default function BlogIndex() {
                     {c.nome} <span>{c.artigos.length}</span>
                   </a>
                 ))}
+                <a className="blog-cat-chip blog-cat-chip--glossario" href="/blog/glossario/">
+                  Glossário
+                </a>
               </div>
             </div>
           )}

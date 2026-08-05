@@ -465,6 +465,28 @@ body {
 .legal-page ul { padding-left: 20px; margin-top: 8px; }
 .legal-page a { color: var(--accent); }
 
+/* ---------- blog: glossário ---------- */
+.glossario { display: grid; gap: 0; }
+.glossario__item {
+  padding: 28px 0; border-bottom: 1px solid var(--border-light);
+  scroll-margin-top: 96px;
+}
+.glossario__item:first-child { padding-top: 0; }
+.glossario__item:last-child { border-bottom: none; padding-bottom: 0; }
+.glossario__item:target .glossario__termo { color: var(--accent); }
+.glossario__termo {
+  font-family: var(--serif); font-weight: 700; font-size: 21px;
+  color: var(--ink); margin-bottom: 10px;
+}
+.glossario__def { margin: 0; max-width: 72ch; }
+.glossario__def p { font-size: 16px; line-height: 1.7; color: #333; }
+.glossario__base {
+  margin-top: 8px; font-size: 13px; color: var(--ink-soft);
+  padding-left: 12px; border-left: 2px solid var(--accent);
+}
+.glossario__veja { margin-top: 10px; font-size: 13.5px; color: var(--ink-soft); }
+.glossario__veja a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
 /* ---------- blog: categorias ---------- */
 .blog-cats { margin-top: 34px; }
 .blog-cats--rodape { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border-light); }
@@ -484,6 +506,9 @@ body {
 .blog-cat-chip:hover, .blog-cat-chip:focus-visible {
   border-color: var(--accent-light); background: rgba(195, 18, 48, 0.14);
 }
+/* O glossário não é categoria de artigo — o contorno pontilhado separa
+   visualmente sem tirar do mesmo agrupamento. */
+.blog-cat-chip--glossario { border-style: dashed; }
 /* Dentro do card claro o chip precisa inverter — no fundo off-white o
    estilo escuro fica ilegível. */
 .float-card .blog-cat-chip {
@@ -668,6 +693,58 @@ body {
 .artigo__corpo .callout p:last-child { margin-bottom: 0; }
 .artigo__corpo .callout strong { color: var(--accent); }
 .artigo__corpo .callout ul, .artigo__corpo .callout ol { margin-bottom: 0; }
+
+/* Fluxo de etapas dentro do artigo. Feito em HTML e não em imagem: o texto
+   fica legível pra buscador e pra IA, é acessível, e escala no celular sem
+   virar borrão. */
+.artigo__corpo .fluxo { margin: 40px 0; }
+.artigo__corpo .fluxo ol { list-style: none; margin: 0; padding: 0; position: relative; }
+.artigo__corpo .fluxo > ol::before {
+  content: ""; position: absolute; left: 17px; top: 12px; bottom: 12px;
+  width: 2px; background: var(--border-light);
+}
+.artigo__corpo .fluxo li {
+  position: relative; display: flex; gap: 20px; padding: 0 0 26px 0; margin: 0;
+  font-size: 16px;
+}
+.artigo__corpo .fluxo li:last-child { padding-bottom: 0; }
+.fluxo__num {
+  position: relative; z-index: 1; flex-shrink: 0;
+  width: 36px; height: 36px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--accent); color: #fff;
+  font-family: var(--sans); font-weight: 700; font-size: 15px;
+}
+.fluxo__passo { padding-top: 5px; }
+/* Só o título do passo vira bloco. Sem o `>`, um <strong> de ênfase dentro
+   do texto quebraria a linha no meio da frase. */
+.fluxo__passo > strong { display: block; color: var(--ink); font-size: 17px; margin-bottom: 4px; }
+.fluxo__passo > span { display: block; color: var(--ink-soft); font-size: 15px; line-height: 1.6; }
+.fluxo__passo span strong { color: var(--ink); }
+.fluxo__vias { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+@media (max-width: 640px) { .fluxo__vias { grid-template-columns: 1fr; } }
+.fluxo__via {
+  background: #fff; border: 1px solid var(--border-light);
+  border-top: 2px solid var(--accent); border-radius: 8px; padding: 14px 16px;
+}
+.fluxo__via em {
+  display: block; font-style: normal; font-weight: 700; font-size: 12px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
+}
+.fluxo__via span { font-size: 14px; }
+/* Desfecho: o mesmo passo leva a dois lugares muito diferentes. */
+.fluxo__saidas { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+@media (max-width: 640px) { .fluxo__saidas { grid-template-columns: 1fr; } }
+.fluxo__saida { border-radius: 8px; padding: 14px 16px; border: 1px solid var(--border-light); }
+.fluxo__saida--ok { background: var(--success-bg); border-color: rgba(21, 128, 61, 0.25); }
+.fluxo__saida--ok em { color: var(--success); }
+.fluxo__saida--perda { background: #fdf0f2; border-color: rgba(195, 18, 48, 0.22); }
+.fluxo__saida--perda em { color: var(--accent); }
+.fluxo__saida em {
+  display: block; font-style: normal; font-weight: 700; font-size: 12px;
+  letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px;
+}
+.fluxo__saida span { font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
 
 .artigo__fontes { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--border-light); }
 .artigo__fontes h2 {
