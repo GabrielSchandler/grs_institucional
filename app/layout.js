@@ -22,8 +22,9 @@ export const metadata = {
     default: "GRS Soluções | Revisão de Juros e Contratos de Financiamento",
     template: "%s | GRS Soluções",
   },
+  // Até ~160 caracteres: acima disso o Google trunca e a frase final se perde.
   description:
-    "Análise técnica de contratos de financiamento de veículos, imóveis e empréstimos. Identificamos juros abusivos e cobranças indevidas — pessoa física e jurídica. Mais de 10 anos de atuação em todo o Brasil.",
+    "Análise técnica de contratos de financiamento, empréstimo e crédito. Identificamos juros e tarifas cobrados fora do combinado — pessoa física e jurídica.",
   keywords: [
     "revisão de juros",
     "juros abusivos",

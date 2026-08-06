@@ -11,7 +11,10 @@ export const metadata = {
   title: "Blog | Financiamento, Empréstimo e Crédito Explicados",
   description:
     "Como funcionam na prática os contratos de financiamento de veículo e imóvel, empréstimo, consignado e crédito empresarial — prazos, encargos e o que costuma dar errado.",
-  alternates: { canonical: "/blog" },
+  alternates: {
+    canonical: "/blog",
+    types: { "application/rss+xml": `${SITE_URL}/blog/feed.xml` },
+  },
   openGraph: {
     type: "website",
     url: `${SITE_URL}/blog`,

@@ -5,11 +5,21 @@ import ScrollFX from "./ScrollFX";
 import CtaButton from "./CtaButton";
 import Footer from "./Footer";
 import { SITE_URL } from "../lib/content";
+import { artigosDaCategoria, formatarData } from "../lib/blog";
 
 // Template compartilhado pelas 3 páginas de serviço (veículo/imóvel/
 // empréstimo) — cada uma passa seu próprio conteúdo, mas a estrutura,
 // o visual e os dados estruturados seguem o mesmo padrão.
 export default function ServicoPage({ data }) {
+  // Artigos do blog ligados a esta modalidade. Sem isso a linkagem fica de
+  // mão única — o blog manda autoridade pra cá e não recebe nada de volta —
+  // e o visitante que ainda não está pronto pra contratar sai sem ter o que
+  // ler.
+  const artigos = (data.categoriasBlog || [])
+    .flatMap((slug) => artigosDaCategoria(slug))
+    .filter((a, i, arr) => arr.findIndex((x) => x.slug === a.slug) === i)
+    .slice(0, 3);
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -97,6 +107,37 @@ export default function ServicoPage({ data }) {
                   </figure>
                 ))}
               </div>
+            </div>
+          </section>
+        )}
+
+        {artigos.length > 0 && (
+          <section className="floating-wrap">
+            <div className="float-card">
+              <p className="eyebrow">Para entender antes de decidir</p>
+              <h2 className="servicos__title" style={{ marginBottom: 36 }}>
+                Como esse tipo de contrato funciona na prática.
+              </h2>
+              <div className="blog-grid blog-grid--topo">
+                {artigos.map((a) => (
+                  <a key={a.slug} className="blog-card" href={`/blog/${a.slug}/`}>
+                    <div className="blog-card__body">
+                      <p className="blog-card__categoria">{a.categoria}</p>
+                      <h3 className="blog-card__title">{a.titulo}</h3>
+                      <p className="blog-card__resumo">{a.resumo}</p>
+                      <p className="blog-card__meta">{a.tempoLeitura} min de leitura</p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+              <p style={{ marginTop: 28, fontSize: 14.5 }}>
+                <a
+                  href="/blog/"
+                  style={{ color: "var(--accent)", textDecoration: "underline", textUnderlineOffset: 3 }}
+                >
+                  Ver todos os artigos do blog
+                </a>
+              </p>
             </div>
           </section>
         )}

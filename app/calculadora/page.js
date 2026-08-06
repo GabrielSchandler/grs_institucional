@@ -6,12 +6,12 @@ import Footer from "../../components/Footer";
 import { CALCULADORA_FAQ } from "../../lib/content";
 
 export const metadata = {
-  title: "Calculadora de Revisão de Contrato | GRS Soluções",
+  title: "Calculadora de Revisão de Contrato",
   description:
     "Faça uma pré-avaliação do seu contrato de financiamento ou empréstimo e envie direto para análise técnica da GRS pelo WhatsApp.",
   alternates: { canonical: "/calculadora" },
   openGraph: {
-    title: "Calculadora de Revisão de Contrato | GRS Soluções",
+    title: "Calculadora de Revisão de Contrato",
     description:
       "Pré-avaliação rápida do seu contrato de financiamento, imóvel ou empréstimo — envie os dados direto para análise técnica da GRS.",
   },
