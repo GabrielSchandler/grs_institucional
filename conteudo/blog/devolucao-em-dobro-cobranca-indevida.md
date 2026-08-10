@@ -35,6 +35,7 @@ imagemAlt: "Duas folhas de papel off-white sobrepostas em mesa escura, separadas
 relacionados:
   - atrasei-parcela-financiamento-o-que-acontece
   - desconto-nao-reconhecido-beneficio-inss
+  - lei-15252-direitos-usuario-servicos-financeiros
 
 faq:
   - pergunta: "Toda cobrança indevida gera devolução em dobro?"

@@ -1,10 +1,10 @@
----
+﻿---
 titulo: "Perdi o veículo na busca e apreensão e ainda devo: como funciona a venda e o saldo remanescente"
 slug: veiculo-apreendido-vendido-saldo-devedor-remanescente
 categoria: busca-e-apreensao
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-05
-atualizadoEm: 2026-08-05
+atualizadoEm: 2026-08-10
 rascunho: false
 
 metaTitle: "Perdi o Carro e Ainda Devo: Saldo Remanescente Explicado"
@@ -56,7 +56,7 @@ faq:
   - pergunta: "Posso ficar negativado pelo saldo remanescente?"
     resposta: "Sim, se o saldo é considerado devido e permanece em aberto. A negativação segue as mesmas regras gerais: notificação prévia pelo órgão mantenedor do cadastro (Súmula 359 do STJ) e prazo máximo de cinco anos para a informação negativa (artigo 43, parágrafo 1º, do Código de Defesa do Consumidor)."
   - pergunta: "Com imóvel funciona igual? Também posso ficar devendo depois?"
-    resposta: "Não. Na alienação fiduciária de imóvel, regida pela Lei 9.514/1997, o leilão público é obrigatório e deve ocorrer em até 60 dias do registro da consolidação; havendo lance inferior ao valor do imóvel, faz-se um segundo leilão em 15 dias. E se esse segundo leilão é frustrado, a dívida se extingue e as partes ficam exoneradas — não há saldo remanescente. É uma diferença importante em relação ao veículo, onde o saldo continua exigível."
+    resposta: "O procedimento é diferente: na alienação fiduciária de imóvel, regida pela Lei 9.514/1997, o leilão público é obrigatório e deve ocorrer em até 60 dias do registro da consolidação, e havendo lance inferior ao valor do imóvel faz-se um segundo leilão em 15 dias. Quanto ao saldo, houve mudança relevante. Até 2023, o artigo 27 previa expressamente que, frustrado o segundo leilão, a dívida se considerava extinta, e o parágrafo 6º obrigava o credor a dar quitação. A Lei 14.711, de 30 de outubro de 2023, alterou esse parágrafo — o texto atual diz que o fiduciário fica investido na livre disponibilidade do imóvel e exonerado de devolver eventual sobra — e revogou o parágrafo 6º. Com isso, a regra expressa de extinção automática deixou de constar da lei, e o tema passou a ser discutido. Conteúdos que afirmam a extinção automática como regra vigente estão apoiados na redação anterior."
   - pergunta: "Quem paga o IPVA e as multas depois da apreensão?"
     resposta: "Os débitos acompanham o bem e o período em que o fato gerador ocorreu. Infrações cometidas e tributos referentes ao tempo em que o veículo estava na posse do devedor tendem a permanecer sob sua responsabilidade; os posteriores à apreensão não deveriam ser atribuídos a quem já não tinha a posse. Na prática administrativa é comum que tudo apareça vinculado ao CPF que constava como proprietário, o que torna relevante registrar a data da apreensão e acompanhar a transferência de registro."
   - pergunta: "Faz sentido discutir o contrato depois de já ter perdido o veículo?"
@@ -75,6 +75,9 @@ fontes:
   - titulo: "Código de Defesa do Consumidor (Lei 8.078/1990) — artigo 43"
     url: "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
     consultadoEm: 2026-08-05
+  - titulo: "Lei 14.711/2023 — Marco Legal das Garantias: nova redação do art. 27 da Lei 9.514/1997"
+    url: "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14711.htm"
+    consultadoEm: 2026-08-10
   - titulo: "Lei 9.514/1997 — artigo 27: leilão público na alienação fiduciária de imóvel"
     url: "https://www.planalto.gov.br/ccivil_03/leis/l9514.htm"
     consultadoEm: 2026-08-05
@@ -159,8 +162,12 @@ Na alienação fiduciária de **bem imóvel**, regida pela **Lei 9.514/1997**, o
 
 - O leilão público é **obrigatório**, e deve ocorrer em até **60 dias** contados do registro da consolidação da propriedade.
 - Se no primeiro leilão o maior lance for inferior ao valor do imóvel, realiza-se um **segundo leilão nos 15 dias seguintes**.
-- No segundo leilão, aceita-se o maior lance desde que igual ou superior ao valor da dívida garantida, somadas as despesas, prêmios de seguro, encargos legais e contribuições condominiais.
-- E o ponto decisivo: **se o segundo leilão é frustrado, a dívida se extingue**. As partes ficam exoneradas das obrigações — não há saldo remanescente a cobrar, nem devolução de eventual sobra.
+- No segundo leilão, aceita-se o maior lance desde que igual ou superior ao valor da dívida garantida, somadas as despesas, prêmios de seguro, encargos legais e contribuições condominiais. Desde a Lei 14.711/2023, não havendo lance nesse patamar, o credor **pode**, a seu exclusivo critério, aceitar lance correspondente a pelo menos metade do valor de avaliação do bem.
+- O devedor tem **direito de preferência** para readquirir o imóvel, da averbação da consolidação até a data do segundo leilão, pelo valor da dívida somado às despesas e encargos.
+
+<aside class="callout">
+<p><strong>Atenção a uma mudança de 2023 que muita informação na internet ainda ignora.</strong> Até então, o artigo 27 previa expressamente que, frustrado o segundo leilão, <em>considerar-se-á extinta a dívida</em>, e o parágrafo 6º obrigava o credor a dar quitação ao devedor em cinco dias. A <strong>Lei 14.711, de 30 de outubro de 2023</strong>, deu nova redação ao parágrafo 5º — que agora diz que o fiduciário fica investido na livre disponibilidade do imóvel e exonerado de devolver eventual sobra — e <strong>revogou o parágrafo 6º</strong>. A regra expressa de extinção automática deixou de constar do texto legal, e a existência ou não de saldo remanescente passou a ser objeto de discussão. Qualquer conteúdo que afirme a extinção automática como regra vigente está apoiado na redação anterior.</p>
+</aside>
 
 | | Veículo (DL 911/69) | Imóvel (Lei 9.514/97) |
 | --- | --- | --- |
@@ -168,7 +175,8 @@ Na alienação fiduciária de **bem imóvel**, regida pela **Lei 9.514/1997**, o
 | Avaliação prévia | Dispensada | Referência de valor do imóvel |
 | Prazo para vender | Não fixado em lei | 60 dias da consolidação |
 | Segunda tentativa | — | Novo leilão em 15 dias |
-| Se a venda não cobre a dívida | Saldo continua exigível | Dívida se extingue |
+| Direito de preferência do devedor | Não previsto | Sim, até o segundo leilão |
+| Se a venda não cobre a dívida | Saldo continua exigível | Regra expressa de extinção **revogada em 2023**; tema em discussão |
 
 Ou seja: quem perde um imóvel nesse regime não fica devendo depois do segundo leilão frustrado. Quem perde um veículo, pode ficar. É uma assimetria relevante e pouco conhecida.
 

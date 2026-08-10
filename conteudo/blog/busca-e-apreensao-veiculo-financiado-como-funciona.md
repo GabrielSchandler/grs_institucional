@@ -37,6 +37,7 @@ relacionados:
   - atrasei-parcela-financiamento-o-que-acontece
   - veiculo-apreendido-vendido-saldo-devedor-remanescente
   - quitacao-antecipada-financiamento-desconto-juros
+  - vender-transferir-devolver-carro-financiado
 
 faq:
   - pergunta: "Já paguei mais de 70% do financiamento. O banco ainda pode pedir a busca e apreensão?"
@@ -266,7 +267,7 @@ Isso não encerra a cobrança. O **artigo 4º do Decreto-Lei 911/69** faculta ao
 Na prática, o efeito é o oposto do que muita gente imagina ao "sumir com o carro": em vez de encerrar o problema, o procedimento migra para um rito em que o risco deixa de estar limitado ao veículo.
 
 <aside class="callout">
-<p><strong>Vender o veículo com gravame é um problema à parte.</strong> Alienar bem que está em alienação fiduciária, sem quitação e sem anuência do credor, cria complicações próprias — inclusive para o comprador, que adquire um bem gravado. Não é um caminho de saída.</p>
+<p><strong>Vender o veículo com gravame é um problema à parte.</strong> Alienar bem que está em alienação fiduciária, sem quitação e sem anuência do credor, cria complicações próprias — inclusive para o comprador, que adquire um bem gravado. Não é um caminho de saída. As alternativas que efetivamente existem para quem quer se desfazer de um veículo financiado estão reunidas em <a href="/blog/vender-transferir-devolver-carro-financiado">vender, transferir ou devolver um carro financiado</a>.</p>
 </aside>
 
 ## Leasing e consórcio seguem regras diferentes

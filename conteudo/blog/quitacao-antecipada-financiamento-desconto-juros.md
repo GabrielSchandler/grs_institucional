@@ -35,6 +35,7 @@ imagemAlt: "Calculadora e papel sobre mesa escura iluminados por uma luz vermelh
 relacionados:
   - atrasei-parcela-financiamento-o-que-acontece
   - busca-e-apreensao-veiculo-financiado-como-funciona
+  - vender-transferir-devolver-carro-financiado
 
 faq:
   - pergunta: "O desconto na quitação antecipada é obrigatório ou depende do banco?"
@@ -167,6 +168,8 @@ Os três caminhos reduzem o custo do crédito, mas de formas diferentes — e co
 Na portabilidade, a operação original é **liquidada** — e nesse momento também incide a redução proporcional dos juros. É um detalhe que costuma escapar: a portabilidade não é só troca de credor, é quitação seguida de nova contratação.
 
 A comparação que decide se ela vale a pena não é entre as taxas anunciadas, e sim entre os **custos efetivos totais** das duas operações, considerando prazo remanescente e eventuais tarifas da nova contratação.
+
+A portabilidade de crédito é disciplinada pela **Resolução CMN 5.057/2022**: a instituição credora original é obrigada a garanti-la quando o devedor solicita, os custos de transferência entre instituições não podem ser repassados ao devedor, e os prazos são de até cinco dias úteis pelo caminho tradicional ou três pelo Open Finance — canal aberto ao público geral para crédito pessoal desde fevereiro de 2026. Vale não confundi-la com a **portabilidade salarial**, prevista na Lei 15.252/2025, que move o salário e não a dívida.
 
 ## Particularidades por modalidade
 

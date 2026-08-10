@@ -8,6 +8,27 @@ import Footer from "../../../components/Footer";
 import { SITE_URL, ASSET_BASE } from "../../../lib/content";
 import { listarArtigos, buscarArtigo, artigosRelacionados, formatarData } from "../../../lib/blog";
 
+// Para onde o fim do artigo aponta: a página de serviço que trata do mesmo
+// assunto que o leitor acabou de ler. Categorias sem serviço correspondente
+// caem na calculadora, que qualifica antes de levar ao comercial.
+const SERVICO_POR_CATEGORIA = {
+  "financiamento-de-veiculo": { href: "/revisao-financiamento-veiculo/", rotulo: "Ver a revisão de financiamento de veículo" },
+  "busca-e-apreensao": { href: "/revisao-financiamento-veiculo/", rotulo: "Ver a revisão de financiamento de veículo" },
+  "financiamento-imobiliario": { href: "/revisao-financiamento-imovel/", rotulo: "Ver a revisão de financiamento imobiliário" },
+  "emprestimo-e-consignado": { href: "/revisao-consignado/", rotulo: "Ver a revisão de consignado" },
+  "credito-empresarial": { href: "/revisao-credito-empresarial/", rotulo: "Ver a revisão de crédito empresarial" },
+};
+const SERVICO_PADRAO = { href: "/calculadora/", rotulo: "Fazer a pré-avaliação" };
+
+// Divide o corpo do artigo num <h2> próximo do meio, para encaixar ali a ponte
+// pra calculadora. Artigos curtos demais (menos de 4 seções) não são divididos.
+function dividirNoPrimeiroH2DoMeio(html) {
+  const posicoes = [...html.matchAll(/<h2[\s>]/g)].map((m) => m.index);
+  if (posicoes.length < 4) return [html, ""];
+  const corte = posicoes[Math.floor(posicoes.length / 2)];
+  return [html.slice(0, corte), html.slice(corte)];
+}
+
 export function generateStaticParams() {
   return listarArtigos().map((a) => ({ slug: a.slug }));
 }
@@ -111,6 +132,14 @@ export default async function ArtigoPage({ params }) {
     ],
   };
 
+  // O leitor do blog chega frio, de uma busca ou de uma resposta de IA. Mandá-lo
+  // direto pro WhatsApp entrega ao comercial um contato sem contexto. O caminho
+  // aqui é outro: no meio do texto ele encontra a calculadora (que qualifica e
+  // já entrega a mensagem pronta pro comercial) e, no fim, a página de serviço
+  // do próprio tema — que é a peça desenhada pra converter aquela intenção.
+  const servico = SERVICO_POR_CATEGORIA[artigo.categoriaSlug] ?? SERVICO_PADRAO;
+  const [corpoAntes, corpoDepois] = dividirNoPrimeiroH2DoMeio(artigo.html);
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
@@ -184,7 +213,24 @@ export default async function ArtigoPage({ params }) {
                   </nav>
                 )}
 
-                <div className="artigo__corpo" dangerouslySetInnerHTML={{ __html: artigo.html }} />
+                <div className="artigo__corpo" dangerouslySetInnerHTML={{ __html: corpoAntes }} />
+
+                {corpoDepois && (
+                  <aside className="callout">
+                    <p>
+                      <strong>Antes de seguir a leitura.</strong> Se o que está descrito acima
+                      se parece com o seu contrato, a{" "}
+                      <a href="/calculadora/">calculadora de pré-avaliação</a> percorre as
+                      informações do financiamento em poucas perguntas e indica se há indício
+                      de cobrança a mais. Leva cerca de dois minutos e não exige enviar
+                      documento nenhum.
+                    </p>
+                  </aside>
+                )}
+
+                {corpoDepois && (
+                  <div className="artigo__corpo" dangerouslySetInnerHTML={{ __html: corpoDepois }} />
+                )}
               </div>
 
               {artigo.fontes.length > 0 && (
@@ -267,10 +313,12 @@ export default async function ArtigoPage({ params }) {
               Quer saber se <em>o seu contrato</em> tem alguma dessas cobranças?
             </h2>
             <p className="closing__sub">
-              Envie o contrato e receba um entendimento técnico do que está
-              sendo cobrado. Sem compromisso.
+              A análise técnica examina o contrato e a evolução da dívida para
+              estabelecer quanto é efetivamente devido. Veja como funciona.
             </p>
-            <CtaButton large>Fale com a GRS</CtaButton>
+            <CtaButton large href={servico.href} hoverLabel={servico.rotulo}>
+              Como funciona a análise
+            </CtaButton>
           </div>
         </section>
 

@@ -1,10 +1,10 @@
----
+﻿---
 titulo: "Desconto que você não reconhece no benefício do INSS: o que é, o que mudou com a Lei 15.327/2026 e o que fazer"
 slug: desconto-nao-reconhecido-beneficio-inss
 categoria: emprestimo-e-consignado
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-05
-atualizadoEm: 2026-08-05
+atualizadoEm: 2026-08-10
 rascunho: false
 
 metaTitle: "Desconto Indevido no INSS: O Que Mudou em 2026"
@@ -69,12 +69,9 @@ fontes:
   - titulo: "Câmara dos Deputados — Nova lei proíbe descontos associativos em benefícios do INSS"
     url: "https://www.camara.leg.br/noticias/1237183-nova-lei-proibe-descontos-associativos-em-beneficios-do-inss"
     consultadoEm: 2026-08-05
-  - titulo: "INSS — Veja como bloquear ou desbloquear o benefício para empréstimo consignado"
-    url: "https://www.gov.br/inss/pt-br/noticias/veja-como-bloquear-ou-desbloquear-o-beneficio-para-emprestimo-consignado"
-    consultadoEm: 2026-08-05
   - titulo: "gov.br — Serviço: bloquear ou desbloquear benefício para empréstimo"
     url: "https://www.gov.br/pt-br/servicos/bloquear-ou-desbloquear-beneficio-para-emprestimo"
-    consultadoEm: 2026-08-05
+    consultadoEm: 2026-08-10
   - titulo: "Código de Defesa do Consumidor (Lei 8.078/1990)"
     url: "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
     consultadoEm: 2026-08-05

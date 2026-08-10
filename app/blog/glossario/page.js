@@ -118,7 +118,10 @@ export default function GlossarioPage() {
               Envie o contrato e receba um entendimento técnico do que está
               sendo cobrado. Sem compromisso.
             </p>
-            <CtaButton large>Fale com a GRS</CtaButton>
+            {/* superfície de blog: leitor frio, qualifica antes de ir ao comercial */}
+            <CtaButton large href="/calculadora/" hoverLabel="Fazer a pré-avaliação">
+              Como funciona a análise
+            </CtaButton>
           </div>
         </section>
 
