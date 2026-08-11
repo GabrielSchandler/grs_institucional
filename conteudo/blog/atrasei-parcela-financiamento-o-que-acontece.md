@@ -1,10 +1,10 @@
----
+﻿---
 titulo: "Atrasei a parcela do financiamento: o que acontece, na ordem em que acontece"
 slug: atrasei-parcela-financiamento-o-que-acontece
 categoria: financiamento-de-veiculo
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-05
-atualizadoEm: 2026-08-07
+atualizadoEm: 2026-08-10
 rascunho: false
 
 metaTitle: "Atrasei a Parcela do Financiamento: O Que Acontece"
@@ -48,7 +48,7 @@ faq:
   - pergunta: "Por quanto tempo o nome fica negativado?"
     resposta: "O artigo 43, parágrafo 1º, do Código de Defesa do Consumidor determina que cadastros de consumidores não podem conter informações negativas referentes a período superior a cinco anos. Quitada a dívida antes disso, a baixa deve ser providenciada."
   - pergunta: "O que é comissão de permanência e ela pode ser cobrada junto com multa e juros?"
-    resposta: "Comissão de permanência é um encargo cobrado durante o período de inadimplência. O STJ admite sua cobrança, mas veda a cumulação: a Súmula 472 estabelece que a comissão de permanência exclui a exigibilidade dos juros remuneratórios, dos moratórios e da multa contratual. A Súmula 30 impede a cumulação com correção monetária. Encontrar todos esses encargos somados na mesma cobrança é um sinal de que a conta merece verificação."
+    resposta: "Depende de quando o contrato foi assinado. Para contratos firmados a partir de 1º de setembro de 2017, a comissão de permanência não pode ser cobrada: a Resolução CMN 4.558/2017 passou a vedar sua previsão contratual, e a Resolução CMN 4.882/2020, em vigor desde 1º de fevereiro de 2021, manteve o regime — nele os únicos encargos admitidos no inadimplemento são juros remuneratórios sobre a parcela vencida, multa contratual e juros de mora. Nos contratos anteriores, o STJ admite a cobrança mas veda a cumulação: a Súmula 472 estabelece que a comissão de permanência exclui a exigibilidade dos juros remuneratórios, dos moratórios e da multa contratual, e a Súmula 30 impede a cumulação com correção monetária. Em qualquer dos dois regimes, encontrar esses encargos somados na mesma cobrança é sinal de que a conta merece verificação."
   - pergunta: "Vale a pena pagar só a parcela mais antiga para regularizar?"
     resposta: "Depende de como o contrato e a instituição tratam a imputação do pagamento. Em muitos casos o valor pago é aplicado primeiro sobre encargos e não sobre o principal, o que faz a dívida parecer não diminuir. Antes de fazer pagamentos parciais, vale entender como eles serão alocados, porque isso muda o resultado."
   - pergunta: "Posso perder o carro por causa de uma única parcela em atraso?"
@@ -76,6 +76,9 @@ fontes:
   - titulo: "Código de Defesa do Consumidor (Lei 8.078/1990) — artigos 42, 43 e 52"
     url: "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
     consultadoEm: 2026-08-05
+  - titulo: "Resolução CMN 4.882/2020 — encargos admitidos no inadimplemento; vedação da comissão de permanência"
+    url: "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Resolu%C3%A7%C3%A3o%20CMN&numero=4882"
+    consultadoEm: 2026-08-10
   - titulo: "STJ — Súmula 472: comissão de permanência e a exigibilidade de outros encargos"
     url: "https://www.stj.jus.br/docs_internet/revista/eletronica/stj-revista-sumulas-2017_43.pdf"
     consultadoEm: 2026-08-05
@@ -125,7 +128,15 @@ O que pode ser cobrado:
 
 ### O ponto da comissão de permanência
 
-A comissão de permanência é um encargo cobrado durante o período de inadimplência. Sua cobrança é admitida pelo STJ, mas com uma restrição que costuma ser ignorada na prática: **ela não se soma aos outros encargos**.
+Aqui a resposta depende de **quando o contrato foi assinado**, e essa distinção muda tudo.
+
+**Para contratos firmados a partir de 1º de setembro de 2017, a comissão de permanência não pode ser cobrada.** A **Resolução CMN 4.558/2017** passou a vedar sua previsão contratual, e a **Resolução CMN 4.882/2020**, em vigor desde 1º de fevereiro de 2021, manteve o mesmo regime. Nele, os únicos encargos admitidos em caso de inadimplemento são **três**: juros remuneratórios por dia de atraso sobre a parcela vencida, multa contratual e juros de mora. Qualquer outro encargo está vedado.
+
+<aside class="callout">
+<p><strong>Encontrar "comissão de permanência" na cobrança de um contrato recente é, por si só, um sinal.</strong> Não se trata de discutir se ela foi somada a outros encargos — sob o regime atual ela simplesmente não tem previsão possível. A discussão sobre cumulação, descrita a seguir, diz respeito aos contratos anteriores a setembro de 2017, que seguem regidos pelo regime antigo.</p>
+</aside>
+
+Nos **contratos anteriores** a essa mudança, a comissão de permanência é admitida pelo STJ, mas com uma restrição que costuma ser ignorada na prática: **ela não se soma aos outros encargos**.
 
 A **Súmula 472 do STJ** estabelece que a cobrança da comissão de permanência — cujo valor não pode ultrapassar a soma dos encargos remuneratórios e moratórios previstos no contrato — **exclui a exigibilidade dos juros remuneratórios, dos moratórios e da multa contratual**. A **Súmula 30** impede a cumulação com correção monetária, e a **Súmula 296** trata dos juros remuneratórios no mesmo sentido.
 
@@ -290,7 +301,7 @@ A GRS Soluções faz essa análise em contratos de [financiamento de veículo](/
 
 ## Em resumo
 
-O atraso aciona encargos imediatos, limitados pela lei: multa de no máximo 2%, juros de mora e correção conforme o contrato — e comissão de permanência apenas se não cumulada com os demais.
+O atraso aciona encargos imediatos, limitados pela lei: multa de no máximo 2%, juros de mora e correção conforme o contrato — e comissão de permanência apenas nos contratos anteriores a setembro de 2017, quando não cumulada com os demais — nos posteriores ela é vedada pela regulamentação do CMN.
 
 A negativação exige notificação prévia do órgão de cadastro e não pode registrar dívida com mais de cinco anos. Paga a dívida, é o credor que tem cinco dias úteis para pedir a baixa — Súmula 548 do STJ.
 
