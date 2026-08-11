@@ -150,6 +150,8 @@ Há uma razão pela qual o financiamento imobiliário concentra mais atenção q
 
 Um contrato de veículo dura 48 ou 60 meses. Um contrato imobiliário dura 240, 360, às vezes 420. Uma divergência pequena na forma como os juros incidem não produz efeito visível numa parcela — mas se repete por centenas delas.
 
+O prazo longo também muda o que está em jogo no atraso: no financiamento imobiliário a retomada do bem é **extrajudicial**, corre no cartório de registro de imóveis e tem prazos curtos — procedimento tratado em [como o imóvel financiado é retomado sem processo judicial](/blog/perder-imovel-financiado-leilao-extrajudicial/).
+
 É por isso que, em financiamento imobiliário, a conferência da planilha de amortização costuma revelar mais do que a comparação da taxa com a média do mercado.
 
 ## Qual escolher, quando ainda dá para escolher

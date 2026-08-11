@@ -13,6 +13,12 @@ export default function ScrollFX() {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     // reveal
+    //
+    // O gatilho precisa disparar ANTES do elemento entrar na tela. Com
+    // threshold alto e sem rootMargin, quem rola rápido passa pelo card antes
+    // de ele terminar de aparecer — o conteúdo sobe "perdido". Por isso:
+    // threshold 0 (qualquer pixel) + rootMargin generoso, que estende a área
+    // de detecção 300px acima e abaixo da viewport.
     const revealEls = document.querySelectorAll(".js-reveal");
     const io = new IntersectionObserver(
       (entries) => {
@@ -23,9 +29,26 @@ export default function ScrollFX() {
           }
         });
       },
-      { threshold: 0.18 }
+      { threshold: 0, rootMargin: "300px 0px 300px 0px" }
     );
     revealEls.forEach((el) => io.observe(el));
+
+    // Rede de segurança: o IntersectionObserver só entrega o primeiro lote no
+    // frame seguinte, e um scroll muito rápido (ou um salto por âncora) pode
+    // deixar cards para trás sem nunca terem sido observados em movimento.
+    // Esta varredura revela na hora tudo que já está na tela ou acima dela.
+    function revelarOQueJaPassou() {
+      revealEls.forEach((el) => {
+        if (el.classList.contains("in-view")) return;
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 300) {
+          el.classList.add("in-view");
+          io.unobserve(el);
+        }
+      });
+    }
+    revelarOQueJaPassou();
+    window.addEventListener("scroll", revelarOQueJaPassou, { passive: true });
 
     // tilt + manifesto — calculados juntos num rAF disparado pelo scroll
     const tiltEls = Array.from(document.querySelectorAll(".js-tilt"));
@@ -77,6 +100,7 @@ export default function ScrollFX() {
 
     return () => {
       io.disconnect();
+      window.removeEventListener("scroll", revelarOQueJaPassou);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };

@@ -100,8 +100,8 @@ fontes:
   - titulo: "Decreto 11.567/2023 — altera o valor do mínimo existencial"
     url: "https://www2.camara.leg.br/legin/fed/decret/2023/decreto-11567-19-junho-2023-794342-norma-pe.html"
     consultadoEm: 2026-08-07
-  - titulo: "Mínimo existencial: controle de constitucionalidade e os Decretos 11.150/2022 e 11.567/2023 — Revista Brasileira de Prática Jurídica (UFMG)"
-    url: "https://periodicos.ufmg.br/index.php/rbpj/article/view/60595"
+  - titulo: "Uma análise do mínimo existencial sob a perspectiva da Lei do Superendividamento e do Decreto 11.150/2022 — Revista A Fortiori"
+    url: "https://revistas.famp.edu.br/revistaafortiori/article/view/787"
     consultadoEm: 2026-08-07
 ---
 

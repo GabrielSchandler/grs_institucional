@@ -180,6 +180,8 @@ Na alienação fiduciária de **bem imóvel**, regida pela **Lei 9.514/1997**, o
 
 Ou seja: quem perde um imóvel nesse regime não fica devendo depois do segundo leilão frustrado. Quem perde um veículo, pode ficar. É uma assimetria relevante e pouco conhecida.
 
+O procedimento do imóvel — que corre no cartório de registro, sem passar pelo Judiciário — está detalhado em [como o imóvel financiado é retomado sem processo judicial](/blog/perder-imovel-financiado-leilao-extrajudicial/).
+
 ## E os débitos do veículo — IPVA, multas, licenciamento?
 
 Pergunta prática que aparece sempre, e que a maioria dos conteúdos ignora.
