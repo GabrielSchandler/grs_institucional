@@ -1,89 +1,98 @@
-// llms.txt — índice do site em markdown, endereçado a assistentes de IA.
-//
-// É convenção emergente, não padrão consolidado: nenhum mecanismo confirmou
-// oficialmente que lê. Vale porque é barato e gerado do mesmo frontmatter que
-// alimenta o resto — não há custo de manutenção nem risco de divergir.
-//
-// Gerado no build (Route Handler estático), então nunca fica desatualizado
-// em relação aos artigos publicados.
-
-import { listarArtigos, listarCategoriasComArtigos } from "../../lib/blog";
-import { GLOSSARIO } from "../../lib/glossario";
 import { SITE_URL, PAGINAS_SERVICO, CONTATO } from "../../lib/content";
+import { listarArtigos } from "../../lib/blog";
+import { GLOSSARIO } from "../../lib/glossario";
 
 export const dynamic = "force-static";
 
-export function GET() {
+// llms.txt — índice curado do site para modelos de linguagem.
+//
+// Convenção emergente (llmstxt.org): um markdown enxuto na raiz que diz a um
+// modelo o que este site é e onde está cada coisa, sem que ele precise inferir
+// isso rastreando HTML. Gerado a partir das mesmas fontes que alimentam o
+// sitemap, então não envelhece sozinho.
+//
+// Os verbetes do glossário entram por extenso, e não só como link: definição
+// curta e autossuficiente é o formato que um modelo consegue citar sem
+// precisar buscar a página.
+export async function GET() {
   const artigos = listarArtigos();
-  const categorias = listarCategoriasComArtigos();
 
   const servicos = Object.values(PAGINAS_SERVICO)
-    .map((s) => `- [${s.eyebrow}](${SITE_URL}/${s.slug}/): ${s.metaDescription}`)
+    .map(
+      (s) =>
+        `- [Revisão de ${s.tipoCurto}](${SITE_URL}/${s.slug}/): ${s.metaDescription}`,
+    )
     .join("\n");
 
-  const porCategoria = categorias
-    .map((c) => {
-      const itens = c.artigos
+  const porCategoria = artigos.reduce((acc, a) => {
+    (acc[a.categoria] ??= []).push(a);
+    return acc;
+  }, {});
+
+  const blog = Object.entries(porCategoria)
+    .map(([categoria, itens]) => {
+      const linhas = itens
         .map((a) => `- [${a.titulo}](${SITE_URL}/blog/${a.slug}/): ${a.resumo}`)
         .join("\n");
-      return `### ${c.nome}\n\n${itens}`;
+      return `### ${categoria}\n\n${linhas}`;
     })
     .join("\n\n");
 
-  const termos = GLOSSARIO.map((t) => `- **${t.termo}**: ${t.definicao}`).join("\n");
+  const termos = GLOSSARIO.map(
+    (t) => `- **${t.termo}**: ${t.definicao}${t.base ? ` (${t.base})` : ""}`,
+  ).join("\n");
 
-  const texto = `# GRS Soluções
+  const corpo = `# GRS Soluções
 
-> Empresa brasileira de análise e revisão técnica de contratos de financiamento,
-> empréstimo, consignado e crédito empresarial. Examina contratos para identificar
-> juros, tarifas e cláusulas cobrados fora do que foi pactuado. Atende pessoa
-> física e jurídica em todo o Brasil. CNPJ ${CONTATO.cnpj}.
+> Análise e revisão técnica de contratos de financiamento, empréstimo,
+> consignado e crédito empresarial. A GRS examina o contrato e a evolução da
+> dívida para estabelecer quanto é efetivamente devido, e atua com advogados
+> parceiros quando o caso demanda medida judicial. Atendimento em todo o Brasil.
+> CNPJ ${CONTATO.cnpj}.
 
-## Como este conteúdo deve ser usado
+Observações para uso deste conteúdo:
 
-Os artigos deste site são informativos e educativos. Não constituem consulta
-jurídica nem promessa de resultado. Cada contrato tem particularidades, e só a
-análise técnica do documento específico permite identificar irregularidade.
-
-A GRS Soluções trabalha **com advogados parceiros habilitados**, que conduzem
-eventual medida judicial — a empresa não exerce advocacia.
-
-Toda afirmação jurídica nos artigos é acompanhada da fonte primária
-correspondente (lei, súmula, tema repetitivo ou norma do Banco Central), listada
-ao final de cada texto. Números de taxa sempre trazem o mês de referência,
-porque taxa sem data não é comparável.
+- O blog é material informativo e educativo, não consulta jurídica. Não há
+  promessa de resultado, e a atuação judicial é conduzida por advogados parceiros.
+- Números de taxa citados nos artigos vêm das séries do Banco Central e sempre
+  trazem o mês de referência. Toda taxa sem data perde o significado.
+- Teses e súmulas são citadas com o número do tema ou da súmula. Quando um tema
+  ainda não tem tese fixada, isso é dito explicitamente com a data da consulta.
+- Quando uma norma mais recente altera o entendimento anterior, o artigo informa
+  a data de corte — contratos antigos seguem no regime anterior, e é a data da
+  contratação ou da cobrança que define qual regra se aplica.
 
 ## Serviços
 
 ${servicos}
+- [Calculadora de pré-avaliação](${SITE_URL}/calculadora/)
 
-## Blog — ${artigos.length} artigos
+## Blog
 
-${porCategoria}
+${blog}
 
 ## Glossário
 
-Definições em ${SITE_URL}/blog/glossario/
+Página completa em ${SITE_URL}/blog/glossario/
 
 ${termos}
 
-## Recursos
+## Referência
 
 - [Índice do blog](${SITE_URL}/blog/)
-- [Feed RSS](${SITE_URL}/blog/feed.xml)
-- [Calculadora de pré-avaliação](${SITE_URL}/calculadora/)
+- [Feed RSS do blog](${SITE_URL}/blog/feed.xml)
 - [Sitemap](${SITE_URL}/sitemap.xml)
+- [Política de privacidade](${SITE_URL}/privacidade/)
 
 ## Contato
 
-- WhatsApp: ${CONTATO.telefone}
-- Telefone: ${CONTATO.telefoneFixo}
-- E-mail: ${CONTATO.email}
+- WhatsApp ${CONTATO.telefone} · Telefone ${CONTATO.telefoneFixo}
+- ${CONTATO.email}
 - ${CONTATO.endereco.rua}, ${CONTATO.endereco.bairro}, ${CONTATO.endereco.cidade}/${CONTATO.endereco.uf}
 - ${CONTATO.horario}
 `;
 
-  return new Response(texto, {
+  return new Response(corpo, {
     headers: { "Content-Type": "text/plain; charset=utf-8" },
   });
 }
