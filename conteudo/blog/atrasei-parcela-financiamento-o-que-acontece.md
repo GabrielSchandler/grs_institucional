@@ -4,7 +4,7 @@ slug: atrasei-parcela-financiamento-o-que-acontece
 categoria: financiamento-de-veiculo
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-05
-atualizadoEm: 2026-08-10
+atualizadoEm: 2026-08-12
 rascunho: false
 
 metaTitle: "Atrasei a Parcela do Financiamento: O Que Acontece"
@@ -267,9 +267,9 @@ A lógica é simples e é o oposto da negociação isolada: só faz sentido comb
 
 O conceito que sustenta todo o sistema é o do valor que precisa sobrar para o consumidor viver. A lei remeteu a definição desse valor a regulamento, e é aí que a coisa ficou instável.
 
-O **Decreto 11.150/2022** fixou o mínimo existencial em 25% do salário mínimo. Em seguida, o **Decreto 11.567, de 19 de junho de 2023**, alterou o artigo 3º daquele decreto e substituiu o percentual por um **valor fixo de R$ 600** — com a ressalva expressa de que o reajuste anual do salário mínimo **não** atualiza esse número.
+O **Decreto 11.150/2022** fixou o mínimo existencial em 25% do salário mínimo vigente na data de sua publicação. Em seguida, o **Decreto 11.567, de 2023**, alterou o artigo 3º daquele decreto e substituiu o percentual por um **valor fixo de R$ 600**, revogando o parágrafo que tratava do reajuste — como o valor deixou de ser expresso em salários mínimos, ele não sobe automaticamente.
 
-Na prática, isso significa que o piso protegido perde poder de compra a cada ano em que o salário mínimo sobe e ele não. O critério é contestado — há questionamento de sua constitucionalidade em curso e crítica consistente na doutrina, sob o argumento de que um valor fixo e congelado não cumpre a função que a lei atribuiu ao mínimo existencial. É um parâmetro que pode mudar, e quem for se valer do procedimento deve conferir o valor vigente no momento.
+Esse critério foi levado ao Supremo Tribunal Federal, e o julgamento aconteceu. Em **23 de abril de 2026**, no julgamento conjunto das **ADPFs 1.005, 1.006 e 1.097**, o Plenário manteve a fixação do valor por decreto — condicionada à revisão periódica pelo Conselho Monetário Nacional — e declarou **inconstitucional a exclusão do crédito consignado** do cálculo do mínimo existencial. É uma mudança relevante para quem tem desconto em folha ou em benefício, e está detalhada em [o que a decisão do STF de 2026 mudou no superendividamento](/blog/superendividamento-minimo-existencial-stf).
 
 <aside class="callout">
 <p><strong>Por que isso importa para quem tem uma parcela atrasada.</strong> Porque muda a pergunta. A conversa usual do atraso é "como faço para pagar esta parcela". A conversa do superendividamento é "quanto eu consigo pagar ao todo, e como distribuo isso entre todos os credores". Quem está no segundo cenário e insiste no primeiro tende a acumular renegociações sucessivas — cada uma resolvendo um mês e piorando o conjunto.</p>

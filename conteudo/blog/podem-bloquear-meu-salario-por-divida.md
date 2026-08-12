@@ -4,8 +4,8 @@ slug: podem-bloquear-meu-salario-por-divida
 categoria: direitos-do-consumidor-bancario
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-10
-atualizadoEm: 2026-08-10
-rascunho: true
+atualizadoEm: 2026-08-12
+rascunho: false
 
 metaTitle: "Podem Bloquear Meu Salário por Dívida? O Que a Lei Diz"
 metaDescription: "Salário é impenhorável, com duas exceções no artigo 833 do CPC. O que mudou com a decisão do STJ de 2023 e o Tema 1.230, ainda sem tese fixada."
@@ -126,6 +126,8 @@ Três pontos merecem destaque nessa mudança, porque cada um limita o alcance de
 **Exige comprovação.** Não basta afirmar que o devedor pode suportar o desconto — é preciso demonstrar que o mínimo existencial fica preservado.
 
 **Não há percentual fixo.** Diferente do consignado, que trabalha com margem definida em regulamentação, aqui a avaliação é caso a caso, sobre renda e despesas reais.
+
+Vale um cuidado de vocabulário: "mínimo existencial" aparece aqui como critério construído pela jurisprudência para relativizar a impenhorabilidade, e aparece também, com contorno próprio, no regime de superendividamento do Código de Defesa do Consumidor — onde tem valor fixado em decreto e foi objeto de decisão do STF em 2026. São conceitos vizinhos, aplicados em contextos diferentes; [o que mudou no mínimo existencial do superendividamento](/blog/superendividamento-minimo-existencial-stf) está tratado em artigo próprio.
 
 ### O ponto ainda em aberto
 

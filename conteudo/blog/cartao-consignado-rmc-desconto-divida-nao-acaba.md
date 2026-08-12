@@ -4,7 +4,7 @@ slug: cartao-consignado-rmc-desconto-divida-nao-acaba
 categoria: emprestimo-e-consignado
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-05
-atualizadoEm: 2026-08-05
+atualizadoEm: 2026-08-12
 rascunho: false
 
 metaTitle: "Cartão Consignado RMC: Por Que a Dívida Nunca Acaba"
@@ -126,6 +126,8 @@ Enquanto ela existe, aquela fatia da margem fica **comprometida e indisponível*
 - permanece enquanto o contrato de cartão estiver ativo
 
 É por isso que muita gente descobre a existência do cartão apenas ao tentar contratar outro consignado e ouvir que a margem está comprometida.
+
+A margem, aliás, não é a mesma em todos os regimes: aposentados e pensionistas do RGPS, servidores e trabalhadores CLT têm tetos diferentes, fixados em dispositivos distintos da Lei 10.820/2003. A comparação está na [tabela de margens por regime](/blog/consignado-clt-demissao-verbas-rescisorias-fgts), no artigo sobre o consignado do trabalhador CLT.
 
 ## O que o STJ está julgando: Tema 1.414
 
