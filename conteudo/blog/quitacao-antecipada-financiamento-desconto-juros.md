@@ -4,7 +4,7 @@ slug: quitacao-antecipada-financiamento-desconto-juros
 categoria: educacao-financeira
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-05
-atualizadoEm: 2026-08-13
+atualizadoEm: 2026-08-21
 rascunho: false
 
 metaTitle: "Quitação Antecipada: O Desconto dos Juros É Obrigatório"
@@ -172,6 +172,12 @@ A comparação que decide se ela vale a pena não é entre as taxas anunciadas, 
 A portabilidade de crédito é disciplinada pela **Resolução CMN 5.057/2022**: a instituição credora original é obrigada a garanti-la quando o devedor solicita, os custos de transferência entre instituições não podem ser repassados ao devedor, e os prazos são de até cinco dias úteis pelo caminho tradicional ou três pelo Open Finance — canal aberto ao público geral para crédito pessoal desde fevereiro de 2026. Vale não confundi-la com a **portabilidade salarial**, prevista na Lei 15.252/2025, que move o salário e não a dívida.
 
 O funcionamento completo, incluindo os limites de valor e prazo que explicam por que a migração nem sempre reduz o que se espera, está em [portabilidade de crédito: regras, prazos e o que mudou com o Open Finance](/blog/portabilidade-de-credito-como-funciona-open-finance).
+
+## O número que torna a comparação honesta
+
+Vale registrar o indicador que atravessa todas as decisões acima: o **Custo Efetivo Total**. Ele reúne juros, tributos, tarifas e seguros numa taxa só, e por isso é o único número que permite comparar duas operações sem que uma esconda custo na outra.
+
+A norma vigente é a Resolução CMN 4.881/2020 — e não a 3.517/2007, ainda amplamente citada como se estivesse valendo. O funcionamento está em [o que é o CET e por que ele é sempre maior que a taxa oferecida](/blog/cet-custo-efetivo-total-o-que-e).
 
 ## Particularidades por modalidade
 

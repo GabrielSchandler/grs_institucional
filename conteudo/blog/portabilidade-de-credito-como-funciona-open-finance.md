@@ -4,7 +4,7 @@ slug: portabilidade-de-credito-como-funciona-open-finance
 categoria: educacao-financeira
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-13
-atualizadoEm: 2026-08-13
+atualizadoEm: 2026-08-21
 rascunho: false
 
 metaTitle: "Portabilidade de Crédito: Regras, Prazos e Limites"
@@ -229,6 +229,12 @@ E o **parágrafo 2º** completa: quando essa substituição ocorre em outra inst
 Ou seja: a norma que protege o mínimo existencial abre expressamente uma porta para a operação que melhora as condições — e determina que, entre instituições diferentes, o caminho é a portabilidade. Para quem tem a renda comprometida, isso vale conhecer antes de aceitar um refinanciamento que aumenta o saldo.
 
 Sobre o quadro do mínimo existencial, que mudou de forma relevante em 2026, vale a leitura de [o que a decisão do STF alterou no diagnóstico de superendividamento](/blog/superendividamento-minimo-existencial-stf).
+
+## O indicador que decide a comparação
+
+A comparação que resolve se a portabilidade vale a pena é entre **custos efetivos totais**, e não entre taxas anunciadas. Uma taxa nominal menor acompanhada de composição de encargos diferente pode não produzir economia alguma.
+
+Se o conceito não estiver claro, vale a leitura de [o que é o CET e o que ele reúne](/blog/cet-custo-efetivo-total-o-que-e) antes de comparar qualquer proposta.
 
 ## O que dá para verificar sozinho
 

@@ -4,7 +4,7 @@ slug: seguro-prestamista-financiamento-cobertura-recusa
 categoria: financiamento-de-veiculo
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-12
-atualizadoEm: 2026-08-12
+atualizadoEm: 2026-08-21
 rascunho: false
 
 metaTitle: "Seguro Prestamista: o Que Cobre e Quando Pode Recusar"
@@ -281,6 +281,12 @@ Se você precisa acionar a cobertura, ou já teve uma recusa, estes são os docu
 Guardar a data de cada protocolo é o cuidado mais simples e o mais decisivo. Os prazos do artigo 86 e do artigo 87 correm de marcos documentais — sem a data, não há como demonstrar que venceram.
 
 ![Pasta de arquivo aberta com folhas em branco e abas divisórias, sobre mesa escura](/img/blog/comum/pasta-documentos.webp "Certificado de adesão, condições gerais e comprovante de protocolo. Sem esses três, qualquer discussão sobre prazo vira palavra contra palavra.")
+
+## Onde o seguro aparece no custo da operação
+
+Além de cobrir riscos, o seguro prestamista tem um efeito que raramente é apresentado: ele **compõe o custo do crédito**. Quando o prêmio é embutido no valor financiado, ele passa a render juros ao longo de todo o contrato.
+
+É por isso que o Custo Efetivo Total costuma se distanciar da taxa de juros anunciada em operações com seguro vinculado — e por que comparar propostas pela taxa, ignorando o CET, favorece justamente a proposta com mais itens embutidos. O tema está detalhado em [o que é o CET](/blog/cet-custo-efetivo-total-o-que-e).
 
 ## Conclusão
 
