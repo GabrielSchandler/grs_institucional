@@ -4,7 +4,7 @@ slug: promessa-irreal-mercado-revisao-dividas
 categoria: golpes-e-praticas-abusivas
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-05
-atualizadoEm: 2026-08-05
+atualizadoEm: 2026-08-13
 rascunho: false
 
 metaTitle: "Revisão de Dívidas: Como Reconhecer Promessa Irreal"
@@ -91,6 +91,8 @@ A revisão de contrato bancário é **instrumento jurídico legítimo**. Está a
 Confundir "existem maus prestadores nesse mercado" com "esse mercado é fraude" é erro de raciocínio — e, não por acaso, é um argumento que interessa a quem cobra.
 
 O que precisa ser separado é o **instrumento** (legítimo) do **prestador** (que pode ou não ser sério).
+
+Vale separar também de uma terceira coisa, que não é promessa exagerada e sim crime: a fraude praticada por quem se passa pela instituição financeira. Sobre esse caso — e sobre quando o banco responde pelo prejuízo —, veja [o golpe da falsa central e do boleto de quitação](/blog/golpe-falsa-central-boleto-quitacao-quando-banco-responde).
 
 ## Os sinais que mais importam
 

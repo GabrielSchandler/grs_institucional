@@ -4,7 +4,7 @@ slug: superendividamento-minimo-existencial-stf
 categoria: direitos-do-consumidor-bancario
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-12
-atualizadoEm: 2026-08-12
+atualizadoEm: 2026-08-20
 rascunho: false
 
 metaTitle: "Superendividamento: o Que o STF Decidiu em 2026"
@@ -272,7 +272,7 @@ Há coisas que qualquer pessoa consegue verificar na própria situação antes d
 **Dá para observar:**
 
 - Quantos contratos de crédito ativos existem, e com quantas instituições diferentes.
-- Se algum pagamento está sendo feito com dinheiro emprestado de outra linha — usar cheque especial ou cartão para pagar parcela é o sinal mais objetivo de que a estrutura não fecha.
+- Se algum pagamento está sendo feito com dinheiro emprestado de outra linha — usar cheque especial ou cartão para pagar parcela é o sinal mais objetivo de que a estrutura não fecha. Sobre o custo dessa linha específica e o teto legal que existe desde 2024, veja [o rotativo do cartão](/blog/rotativo-cartao-limite-encargos-lei-14690).
 - Se a renda que efetivamente chega à conta, depois de todos os descontos automáticos, cobre moradia, alimentação, saúde e transporte.
 - Há quanto tempo a situação está assim, e se ela vem piorando mês a mês.
 

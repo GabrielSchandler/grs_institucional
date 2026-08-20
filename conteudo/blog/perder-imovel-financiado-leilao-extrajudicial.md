@@ -4,7 +4,7 @@ slug: perder-imovel-financiado-leilao-extrajudicial
 categoria: financiamento-imobiliario
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-10
-atualizadoEm: 2026-08-10
+atualizadoEm: 2026-08-20
 rascunho: false
 
 metaTitle: "Perder o Imóvel Financiado: Como Funciona o Leilão"
@@ -251,6 +251,14 @@ Como muita gente já passou por uma situação ou conhece quem passou, é comum 
 | Saldo após a venda | Continua exigível | Regra expressa de extinção revogada em 2023 |
 
 O percurso do lado do veículo está detalhado em [busca e apreensão de veículo financiado](/blog/busca-e-apreensao-veiculo-financiado-como-funciona) e em [perdi o veículo e ainda devo](/blog/veiculo-apreendido-vendido-saldo-devedor-remanescente). Já a sequência geral do atraso — encargos, negativação, renegociação — vale para as duas modalidades e está em [o que acontece quando a parcela atrasa](/blog/atrasei-parcela-financiamento-o-que-acontece).
+
+## Quando o imóvel garante um empréstimo, e não a própria compra
+
+Vale uma distinção que muda o resultado do procedimento descrito acima.
+
+O mecanismo de retomada é o mesmo quando o imóvel foi dado em garantia de um **empréstimo de destinação livre** — o chamado crédito com garantia de imóvel. O que muda é o regime do saldo remanescente: a regra que impede a subsistência de dívida após a execução da garantia se restringe à alienação fiduciária vinculada a financiamento para aquisição ou construção de imóvel residencial.
+
+Quem contratou home equity está, portanto, sujeito ao mesmo procedimento e a um desfecho possivelmente distinto. O tema está detalhado em [crédito com garantia de imóvel: o que você aceita em troca](/blog/credito-com-garantia-de-imovel-riscos).
 
 ## Antes do procedimento começar
 

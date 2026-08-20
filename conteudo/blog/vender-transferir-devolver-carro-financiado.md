@@ -4,7 +4,7 @@ slug: vender-transferir-devolver-carro-financiado
 categoria: financiamento-de-veiculo
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-07
-atualizadoEm: 2026-08-07
+atualizadoEm: 2026-08-20
 rascunho: false
 
 metaTitle: "Vender ou Transferir Carro Financiado: O Que Pode"
@@ -301,6 +301,14 @@ Em outras palavras: o atraso isolado não gera indenização presumida. Isso nã
 | **Risco principal** | O valor da venda não cobrir o saldo devedor | Recusa da instituição — e silêncio é recusa | Entregar sem quitação expressa e continuar devendo |
 
 E, fora da tabela, o contrato de gaveta: não depende do credor, não tira o nome de ninguém, não exige dinheiro extra — e concentra todos os riscos em quem entrega o carro.
+
+## Se o seu contrato for leasing, as saídas mudam
+
+Tudo o que foi descrito até aqui pressupõe financiamento com alienação fiduciária — o contrato em que o veículo é seu e está em garantia.
+
+Se o contrato for **arrendamento mercantil**, o veículo pertence à arrendadora durante toda a vigência. Isso altera as saídas: não há venda do bem pelo arrendatário antes de exercida a opção de compra, a transferência depende de anuência da arrendadora, e a retomada ocorre por reintegração de posse, não por busca e apreensão.
+
+Como identificar qual dos dois você assinou, e o que acontece com o VRG pago, está em [leasing de veículo e o VRG](/blog/leasing-veiculo-vrg-diferenca-financiamento).
 
 ## O número que governa todas as saídas
 

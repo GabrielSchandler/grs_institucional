@@ -4,7 +4,7 @@ slug: capital-de-giro-o-que-a-empresa-precisa-saber
 categoria: credito-empresarial
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-06
-atualizadoEm: 2026-08-06
+atualizadoEm: 2026-08-20
 rascunho: false
 
 metaTitle: "Capital de Giro: O Que Saber Antes e Durante o Contrato"
@@ -156,6 +156,14 @@ A aplicação do **Código de Defesa do Consumidor** a relações entre empresas
 Isso **não** significa que a empresa fique desprotegida. O **Código Civil** continua aplicável, com os princípios de boa-fé objetiva, função social do contrato e vedação ao enriquecimento sem causa. Divergência entre o pactuado e o executado é discutível independentemente do enquadramento consumerista.
 
 O que muda são os fundamentos e a estratégia — razão pela qual a análise de contrato PJ não é simplesmente a de PF aplicada a um CNPJ.
+
+## A garantia que o sócio presta com o próprio patrimônio
+
+Operações de capital de giro para pequenas e médias empresas raramente são concedidas apenas contra o patrimônio da pessoa jurídica. A instituição costuma exigir **aval dos sócios** em nota promissória ou cédula de crédito bancário.
+
+Isso não é irregular — é o que viabiliza o crédito. Mas significa que a assinatura do sócio coloca o patrimônio pessoal dele a responder pela operação, independentemente da separação entre empresa e sócio. E significa também que sair da sociedade não desfaz, por si só, a garantia prestada.
+
+As diferenças entre aval e fiança, o que é benefício de ordem e o que fazer para se desvincular estão em [aval e fiança: o que você assume ao assinar por outro](/blog/aval-e-fianca-o-que-voce-assume).
 
 ## Onde a análise entra
 
