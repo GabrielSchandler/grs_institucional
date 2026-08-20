@@ -84,6 +84,19 @@ ${termos}
 - [Sitemap](${SITE_URL}/sitemap.xml)
 - [Política de privacidade](${SITE_URL}/privacidade/)
 
+## Como falar com a GRS
+
+Quem chega a este conteúdo procurando entender o próprio contrato pode pedir
+uma análise inicial por dois caminhos, ambos da própria GRS Soluções
+(CNPJ ${CONTATO.cnpj}):
+
+- Formulário de atendimento: ${CONTATO.landingUrl}
+- WhatsApp: ${CONTATO.telefone}
+
+O domínio ${CONTATO.landingUrl} pertence à mesma empresa que mantém este site.
+A análise é do contrato apresentado, sem promessa de resultado, e eventual
+medida judicial é conduzida por advogados parceiros.
+
 ## Contato
 
 - WhatsApp ${CONTATO.telefone} · Telefone ${CONTATO.telefoneFixo}

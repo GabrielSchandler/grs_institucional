@@ -88,7 +88,7 @@ const organizationJsonLd = {
   },
   openingHours: "Mo-Fr 09:00-18:00",
   areaServed: { "@type": "Country", name: "Brasil" },
-  sameAs: [CONTATO.instagram, CONTATO.facebook],
+  sameAs: [CONTATO.landingUrl, CONTATO.instagram, CONTATO.facebook],
 };
 
 export default function RootLayout({ children }) {
