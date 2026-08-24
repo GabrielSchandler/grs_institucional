@@ -4,7 +4,7 @@ slug: promessa-irreal-mercado-revisao-dividas
 categoria: golpes-e-praticas-abusivas
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-05
-atualizadoEm: 2026-08-13
+atualizadoEm: 2026-08-22
 rascunho: false
 
 metaTitle: "Revisão de Dívidas: Como Reconhecer Promessa Irreal"
@@ -67,8 +67,8 @@ fontes:
   - titulo: "CNJ — A nova recomendação sobre litigância abusiva: características e boas práticas"
     url: "https://www.cnj.jus.br/a-nova-recomendacao-do-cnj-sobre-litigancia-abusiva-caracteristicas-e-boas-praticas/"
     consultadoEm: 2026-08-05
-  - titulo: "ConJur — O mito da litigância predatória contra bancos: o que dizem os dados oficiais (diagnóstico ABJ/CNJ)"
-    url: "https://www.conjur.com.br/2026-mai-02/mito-da-litigancia-predatoria-contra-bancos-o-que-dizem-os-dados-oficiais/"
+  - titulo: "CNJ — Sumário executivo do Diagnóstico sobre o enfrentamento da litigância abusiva no Poder Judiciário (pesquisa CNJ/ABJ, dezembro de 2025)"
+    url: "https://www.cnj.jus.br/wp-content/uploads/2025/12/sumarioexecutivo-litigancia-abusiva-1.pdf"
     consultadoEm: 2026-08-05
   - titulo: "Código de Defesa do Consumidor (Lei 8.078/1990) — publicidade enganosa e práticas abusivas"
     url: "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"

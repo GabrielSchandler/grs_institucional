@@ -4,7 +4,7 @@ slug: cet-custo-efetivo-total-o-que-e
 categoria: educacao-financeira
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-21
-atualizadoEm: 2026-08-21
+atualizadoEm: 2026-08-22
 rascunho: false
 
 metaTitle: "CET: o Que É o Custo Efetivo Total e Por Que É Maior"
@@ -238,6 +238,14 @@ Informações que qualquer contratante consegue levantar, sem apoio especializad
 O que esses documentos **não** respondem sozinhos é se o que foi cobrado ao longo da operação corresponde ao que foi contratado. Confrontar o CET informado, a composição real dos encargos e a evolução do saldo é exame técnico — não é uma leitura do número na primeira página.
 
 ![Lupa de aro escuro sobre folha em branco, mesa de madeira](/img/blog/comum/lupa-analise.webp "O CET informado está na proposta. Se ele corresponde ao que foi efetivamente cobrado ao longo do contrato é outra pergunta.")
+
+## De onde vem a diferença, na prática
+
+Duas coisas explicam a maior parte do espaço entre a taxa anunciada e o CET, e ambas têm tratamento jurídico próprio.
+
+A primeira são as **tarifas**. O STJ já definiu, em julgamento repetitivo, quais podem ser cobradas e quais não — e em dois casos o critério é a data do contrato. O quadro completo está em [tarifas no financiamento de veículo](/blog/tarifas-financiamento-veiculo-o-que-pode-ser-cobrado).
+
+A segunda é o **regime de capitalização**, que explica por que a taxa anual informada costuma ser maior que doze vezes a mensal. Isso é lícito e tem base normativa consolidada — ver [por que a capitalização é legal e o que o STF decidiu em 2024](/blog/capitalizacao-de-juros-e-legal-stf-2024).
 
 ## Onde o CET continua importando depois da assinatura
 

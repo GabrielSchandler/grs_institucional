@@ -4,7 +4,7 @@ slug: perder-imovel-financiado-leilao-extrajudicial
 categoria: financiamento-imobiliario
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-10
-atualizadoEm: 2026-08-20
+atualizadoEm: 2026-08-22
 rascunho: false
 
 metaTitle: "Perder o Imóvel Financiado: Como Funciona o Leilão"
@@ -68,9 +68,6 @@ fontes:
     consultadoEm: 2026-08-10
   - titulo: "Lei 14.711/2023 — Marco Legal das Garantias: nova redação dos artigos 26 e 27 da Lei 9.514/1997"
     url: "http://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14711.htm"
-    consultadoEm: 2026-08-10
-  - titulo: "ConJur — Tema 982 do STF: retomada extrajudicial de imóvel na alienação fiduciária"
-    url: "https://www.conjur.com.br/2023-nov-11/tema-982-do-stf-retomada-extrajudicial-de-imovel-na-alienacao-fiduciaria/"
     consultadoEm: 2026-08-10
   - titulo: "TJMG — Tema 982 do STF: constitucionalidade do procedimento de execução extrajudicial"
     url: "https://www.tjmg.jus.br/portal-tjmg/jurisprudencia/recurso-repetitivo-e-repercussao-geral/constitucionalidade-do-procedimento-de-execucao-extrajudicial-nos-contratos-de-mutuo-com-alienacao-fiduciaria-de-imovel-pelo-sistema-financeiro-imobiliario-tema-982-stf.htm"

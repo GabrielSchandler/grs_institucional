@@ -4,7 +4,7 @@ slug: aval-e-fianca-o-que-voce-assume
 categoria: credito-empresarial
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-20
-atualizadoEm: 2026-08-20
+atualizadoEm: 2026-08-22
 rascunho: false
 
 metaTitle: "Aval e Fiança: o Que Você Assume ao Assinar por Outro"
@@ -71,8 +71,8 @@ fontes:
   - titulo: "STJ — Súmula 332: a fiança prestada sem autorização de um dos cônjuges implica a ineficácia total da garantia"
     url: "https://www.stj.jus.br/docs_internet/revista/eletronica/stj-revista-sumulas-2012_28_capSumula332.pdf"
     consultadoEm: 2026-08-20
-  - titulo: "ConJur — Corte Especial do STJ altera texto da súmula sobre fiança (sessão de 5 de março de 2008)"
-    url: "https://www.conjur.com.br/2008-mar-06/corte_especial_stj_altera_sumula_fianca/"
+  - titulo: "Arpen-SP — Corte Especial do STJ altera súmula sobre fiança prestada por pessoa casada sem anuência do cônjuge (sessão de 5 de março de 2008)"
+    url: "https://www.arpensp.org.br/noticia/6676"
     consultadoEm: 2026-08-20
   - titulo: "TRT da 4ª Região — Escola Judicial: outorga conjugal e a responsabilidade conjunta do casal na gestão do patrimônio"
     url: "https://www.trt4.jus.br/portais/escola/modulos/noticias/424320"

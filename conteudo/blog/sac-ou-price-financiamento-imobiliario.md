@@ -4,7 +4,7 @@ slug: sac-ou-price-financiamento-imobiliario
 categoria: financiamento-imobiliario
 autor: "Equipe GRS Soluções"
 publicadoEm: 2026-08-05
-atualizadoEm: 2026-08-05
+atualizadoEm: 2026-08-22
 rascunho: false
 
 metaTitle: "SAC ou Price: A Diferença Real no Financiamento"
@@ -171,6 +171,12 @@ A análise técnica de um contrato imobiliário verifica o que foi pactuado, o q
 É trabalho sobre documento: contrato, planilhas de amortização e histórico de pagamentos. Não é conferência de extrato nem aplicação de tese pronta.
 
 A GRS Soluções realiza essa análise em [revisão de financiamento imobiliário](/revisao-financiamento-imovel) e nas demais [modalidades de crédito](/revisao-emprestimo), apresentando um entendimento técnico do que está sendo cobrado antes de qualquer decisão. Quando o caso demanda medida judicial, a condução é feita por advogados parceiros habilitados.
+
+## A tese de que a Price seria ilegal
+
+Vale registrar, porque a afirmação circula com força: sustenta-se por vezes que a Tabela Price seria ilegal por embutir capitalização de juros. Essa tese não é acolhida pelo STJ.
+
+A capitalização com periodicidade inferior à anual é permitida desde 2000 para instituições do Sistema Financeiro Nacional, foi reconhecida nas Súmulas 539 e 541 do STJ e teve a constitucionalidade confirmada pelo STF na ADI 2316, em maio de 2024. O detalhamento está em [juros sobre juros: por que a capitalização é legal](/blog/capitalizacao-de-juros-e-legal-stf-2024).
 
 ## Em resumo
 
