@@ -329,3 +329,5 @@ As três ideias mais repetidas sobre o tema estão erradas: ter pago mais de 70%
 O intervalo entre o primeiro atraso e a apreensão é curto, mas é nele que existe a maior parte das alternativas. Entender o que está no contrato antes que esse intervalo se feche costuma fazer diferença no resultado.
 
 Sobre o que vem antes desse ponto, veja [o que acontece quando a parcela atrasa](/blog/atrasei-parcela-financiamento-o-que-acontece/). Sobre o que vem depois, [a venda do veículo e o saldo remanescente](/blog/veiculo-apreendido-vendido-saldo-devedor-remanescente/).
+
+Vale registrar que este mesmo procedimento não se limita ao veículo comprado com financiamento. Ele alcança qualquer bem móvel em alienação fiduciária — inclusive a moto, tratada em [por que o financiamento de moto costuma custar mais](/blog/financiamento-de-moto-por-que-custa-mais), e o carro já quitado que é dado em garantia de um empréstimo, situação descrita em [refinanciamento de veículo](/blog/refinanciamento-de-veiculo-carro-como-garantia).

@@ -285,4 +285,6 @@ O que mudou em 2026 foi o atrito. Com a entrada no Open Finance a partir de feve
 
 E fica o limite: mudar de credor melhora o preço do que se deve, não corrige o que se deve. Se a sua dúvida é sobre o valor do saldo — e não sobre quem cobra por ele —, a resposta está no contrato e exige exame técnico dos documentos.
 
+Ainda assim, a portabilidade é um dos poucos caminhos que efetivamente alteram o custo de um contrato já assinado — porque a queda da taxa básica de juros, sozinha, não altera. A razão está em [a Selic caiu e a sua parcela não mudou](/blog/selic-caiu-parcela-financiamento-nao-caiu).
+
 A GRS Soluções analisa contratos de financiamento, empréstimo, consignado e crédito empresarial, apurando o que foi efetivamente cobrado frente ao que foi contratado. A [pré-avaliação](/calculadora) é o ponto de partida para entender qual das duas perguntas é a sua.

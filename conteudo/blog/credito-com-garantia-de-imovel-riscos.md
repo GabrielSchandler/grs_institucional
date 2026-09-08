@@ -258,6 +258,8 @@ A taxa menor não é um favor nem uma oportunidade escassa: é o preço de um ri
 
 Dois pontos merecem ficar: a retomada, se ocorrer, é **extrajudicial**; e a proteção contra saldo remanescente que existe no financiamento habitacional **não alcança** o empréstimo de destinação livre. Conteúdo que trata os dois produtos como equivalentes está descrevendo uma segurança que essa modalidade não oferece.
 
+A modalidade tem uma equivalente para bens móveis, com lei e procedimento de retomada próprios: o empréstimo garantido pelo veículo, tratado em [refinanciamento de veículo](/blog/refinanciamento-de-veiculo-carro-como-garantia). Quem está decidindo qual bem colocar na linha encontra ali a outra metade da comparação.
+
 Se você tem uma proposta em mãos, ou um contrato desse tipo em andamento, o passo útil é reunir a minuta ou o contrato, a matrícula e a proposta com o CET, e submetê-los a exame antes de decidir.
 
 A GRS Soluções analisa contratos de financiamento, empréstimo, consignado e crédito empresarial, apurando o que foi efetivamente cobrado frente ao que foi contratado. A página de [revisão de financiamento imobiliário](/revisao-financiamento-imovel) descreve como esse exame é conduzido.

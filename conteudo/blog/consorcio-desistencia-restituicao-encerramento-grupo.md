@@ -281,4 +281,6 @@ O que gera a maior parte dos conflitos não é a estrutura, e sim a distância e
 
 Nada disso significa que exista irregularidade no seu caso. Significa que a resposta está no contrato de participação e nos demonstrativos da administradora — e que a diferença entre um valor retido corretamente e um valor retido além do previsto só aparece confrontando os documentos.
 
+Vale notar onde essa modalidade pesa mais: no mercado de duas rodas, o consórcio respondeu por 35,5% das motocicletas zero-quilômetro adquiridas no primeiro semestre de 2026. A comparação entre as duas formas de comprar uma moto está em [por que o financiamento de moto costuma custar mais](/blog/financiamento-de-moto-por-que-custa-mais).
+
 A GRS Soluções analisa contratos de financiamento, empréstimo, consignado e crédito empresarial, apurando o que foi efetivamente cobrado frente ao que foi contratado. Se além do consórcio houver contratos de crédito em andamento, a [pré-avaliação](/calculadora) é o ponto de partida para entender o conjunto.

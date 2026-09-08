@@ -265,6 +265,8 @@ Ele é obrigatório, deve ser informado **antes** da contratação, e alcança p
 
 Fica também a advertência mais importante deste texto: **taxa acima da média não é, por si só, irregularidade**. A média do Banco Central serve para comparar, não para concluir. O que ela indica é quando vale investigar de onde vem a diferença.
 
+E vale lembrar que, uma vez assinado, o CET de um contrato prefixado não se move — nem quando a taxa básica de juros cai. Por que a decisão do Copom não alcança contratos em curso está em [a Selic caiu e a sua parcela não mudou](/blog/selic-caiu-parcela-financiamento-nao-caiu).
+
 Se você tem um contrato em andamento e não sabe qual é o CET dele, o passo concreto é localizar a proposta e o contrato e comparar os dois números — taxa e CET, na mesma unidade. A distância entre eles é a primeira informação útil sobre a sua operação.
 
 A GRS Soluções analisa contratos de financiamento, empréstimo, consignado e crédito empresarial, apurando o que foi efetivamente cobrado frente ao que foi contratado. A [pré-avaliação](/calculadora) é o ponto de partida para entender o seu caso.

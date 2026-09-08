@@ -235,3 +235,5 @@ Não pode haver tarifa pela liquidação antecipada (Resolução CMN 3.516/2007)
 O sinal mais simples de que o desconto não foi aplicado é o valor de quitação coincidir com a soma das parcelas restantes.
 
 E, quando a antecipação é parcial, abater prazo costuma economizar mais do que abater parcela — ainda que aliviar a parcela seja a escolha certa quando o problema é o mês, e não o contrato.
+
+Junto com a portabilidade e a renegociação, a quitação antecipada é um dos poucos caminhos que mudam o custo de um contrato em andamento. A queda da taxa básica de juros não é um deles, pelo motivo explicado em [a Selic caiu e a sua parcela não mudou](/blog/selic-caiu-parcela-financiamento-nao-caiu).

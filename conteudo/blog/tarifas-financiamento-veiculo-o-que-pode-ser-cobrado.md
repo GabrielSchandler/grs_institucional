@@ -188,6 +188,8 @@ Quando a tarifa é **paga à vista**, ela é um custo e acaba ali. Quando é **f
 
 Uma tarifa de R$ 800 embutida num contrato de 48 meses não custa R$ 800. Custa R$ 800 mais os juros que incidiram sobre ela por quatro anos.
 
+E o peso é proporcional: como as tarifas têm valor aproximadamente fixo, elas representam uma fração bem maior de um valor financiado pequeno. É por isso que o efeito é mais severo em contratos de moto do que em contratos de automóvel — comparação feita em [por que o financiamento de moto costuma custar mais](/blog/financiamento-de-moto-por-que-custa-mais).
+
 É por isso que as tarifas são a principal explicação para a distância entre a taxa de juros anunciada e o custo real da operação — distância que aparece no **Custo Efetivo Total**. Como o CET funciona, o que ele reúne e por que é obrigatório informá-lo antes da contratação está em [o que é o CET e por que ele é sempre maior que a taxa oferecida](/blog/cet-custo-efetivo-total-o-que-e).
 
 E há ainda o **seguro prestamista**, que é item à parte e tem discussão própria — inclusive quanto à forma de contratação, tratada em [o seguro que veio junto com o financiamento](/blog/seguro-prestamista-financiamento-cobertura-recusa).
